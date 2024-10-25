@@ -1,6 +1,4 @@
 package com.JointFinance.Models;
-
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,189 +18,187 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "JF_TRN_SOF_ADDENDUMS")
-@IdClass(JfTrnSofAddedumsCompKey.class)
-public class JfTrnSofAddedums {
+@Table(name = "JF_HST_SOF_ADDENDUMS")
+@IdClass(JfHstSofAddedumsCompKey.class)
+public class JfHstSofAddedums {
+	
 	@Id
 	@Column(name="SOF_CODE",length=10,  nullable = false)
-	private String jtsaSofCode;
+	private String jhsaSofCode;
 	
 	@Id
 	@Column(name="SEQ_NO")
-	private Integer jtsaSeqno;
+	private Integer jhsaSeqno;
 	
 	@Column(name="VERSION_NO")
-	private Integer jtsaVersion;
+	private Integer jhsaVersion;
 	
 	@Column(name="ADDENDUM_NO",length=30)
-	private String jtsaAddendumNo;
+	private String jhsaAddendumNo;
 	
 	@Column(name="ADDENDUM_DATE")
-	private Date jtsaAddendumDate;
+	private Date jhsaAddendumDate;
 	
 	@Column(name="EFFECTIVE_DATE")
-	private Date jtsaEffectiveDate;
+	private Date jhsaEffectiveDate;
 	
 	@Column(name="PCT_PORTION")
-	private BigDecimal jtsaPctPortion;
+	private BigDecimal jhsaPctPortion;
 	
 	@Column(name="INTR_EFF")
-	private BigDecimal jtsaIntrEff;
+	private BigDecimal jhsaIntrEff;
 	
 	@Column(name="WAIVED_PEN")
-	private Integer jtsaWaivePen;
+	private Integer jhsaWaivePen;
 	
 	@Column(name="AUTO_WO_DAY")
-	private Integer jtsaAutoWoDay;
+	private Integer jhsaAutoWoDay;
 	
 	@Column(name="DISB_NOT_DEC")
-	private Integer jtsaDisbNotDec;
+	private Integer jhsaDisbNotDec;
 	
 	@Column(name="DISB_DECEMBER")
-	private Integer jtsaDisbDecember;	
+	private Integer jhsaDisbDecember;	
 	
 	@Column(name="INTR_FLAG",length=3)
-	private String jtsaIntrFlag;
+	private String jhsaIntrFlag;
 	
 	@Column(name="PCT_OPEX")
-	private BigDecimal jtsaPctOpex;
+	private BigDecimal jhsaPctOpex;
 	
 	@Column(name="PCT_PROVISI")
-	private BigDecimal jtsaPctProvisi;
+	private BigDecimal jhsaPctProvisi;
 	
 	@Column(name="DIGIT_DECIMAL")
-	private BigDecimal jtsaDigitDecimal;
+	private BigDecimal jhsaDigitDecimal;
 
 	@Column(name="FIRST_INT_AMT_TYPE",length=10)
-	private String jtsaFirstIntAmtType;
+	private String jhsaFirstIntAmtType;
 	
 	@Column(name="DUE_DATE_TYPE",length=10)
-	private String jtsaDueDateType;
+	private String jhsaDueDateType;
 	
 	@Column(name="BANK_CONT_NO_FLAG",length=1)
-	private String jtsaBankContNoFlag;
+	private String jhsaBankContNoFlag;
 	
 	@Column(name="IF_ADVANCE",length=2)
-	private String jtsaIfAdvance;
+	private String jhsaIfAdvance;
 	
 	@Column(name="INITIAL_NAME",length=30)
-	private String jtsaInitialName;
+	private String jhsaInitialName;
 	
 	@Column(name="LAST_INT_AMT_TYPE",length=10)
-	private String jtsaLatIntAmtType;
+	private String jhsaLatIntAmtType;
 	
 	@Column(name="JFIN_TYPE",length=1)
-	private String jtsaJfinType;
+	private String jhsaJfinType;
 	
 	@Column(name="IF_BUYBACK",length=2)
-	private String jtsaIfBuyBack;
+	private String jhsaIfBuyBack;
 	
 	@Column(name="PUTBACK_FLAG",length=1)
-	private String jtsaPutBackFlag;
+	private String jhsaPutBackFlag;
 	
 	@Column(name="JTSA_SYARIAH_FLAG",length=1)
-	private String jtsaSyariahFlag;
+	private String jhsaSyariahFlag;
 	
 	@Column(name="IF_AYD",length=2)
-	private String jtsaIfAyd;
+	private String jhsaIfAyd;
 	
 	@Column(name="VALIDDATE_IS_SYSDATE_PLUS")
-	private Integer jtsaValdateIsSysdatePlus;
+	private Integer jhsaValdateIsSysdatePlus;
 	
 	@Column(name="IF_SOLD",length=2)
-	private String jtsaIfSold;
+	private String jhsaIfSold;
 	
 	@Column(name="PEN_RATE")
-	private BigDecimal jtsaPenRate;
+	private BigDecimal jhsaPenRate;
 	
 	@Column(name="LETT_LANG",length=1)
-	private String jtsaLettLang;
+	private String jhsaLettLang;
 	
 	@Column(name="PCT_ADMIN_PT")
-	private BigDecimal jtsaPctAdminPt;
+	private BigDecimal jhsaPctAdminPt;
 	
 	@Column(name="CAP_RISK")
-	private BigDecimal jtsaCapRisk;
+	private BigDecimal jhsaCapRisk;
 	
 	@Column(name="CROSS_PV_ADVANCE",length=1)
-	private String jtsaCrossPvAdvance;
+	private String jhsaCrossPvAdvance;
 	
 	@Column(name="PAYMENT_DATE_TYPE",length=2)
-	private String jtsaPaymentDateType;
+	private String jhsaPaymentDateType;
 	
 	@Column(name="NEED_PRE_SC",length=1)
-	private String jtsaNeedPreSc;
+	private String jhsaNeedPreSc;
 	
 	@Column(name="PT_IN_WEEKEND",length=2)
-	private String jtsaPtinWeeked;
+	private String jhsaPtinWeeked;
 	
 	@Column(name="GRACE_PENALTY",length=2)
-	private BigDecimal jtsaGracePenalty;
+	private BigDecimal jhsaGracePenalty;
 	
 	@Column(name="FORMULA_PENALTY",length=2000)
-	private String jtsaFormulaPenalty;
+	private String jhsaFormulaPenalty;
 	
 	@Column(name="PENALTY_PENDING",length=2)
-	private String jtsaPenaltyPending;
+	private String jhsaPenaltyPending;
 	
 	@Column(name="EARLY_PAID_HOLD",length=2)
-	private String jtsaEarlypaidHold;
+	private String jhsaEarlypaidHold;
 	
 	@Column(name="PARTIAL_PAID_HOLD",length=2)
-	private String jtsaPartialPaidHold;
+	private String jhsaPartialPaidHold;
 	
 	@Column(name="CREATED_BY",length=15)
-	private String jtsaCreateBy;
+	private String jhsaCreateBy;
 	
 	@Column(name="CREATED_TIMESTAMP")
-	private Date jtsaCreateDate;
+	private Date jhsaCreateDate;
 	
 	@Column(name="LASTUPDATE_BY",length=15)
-	private String jtsaUpdateBy;
+	private String jhsaUpdateBy;
 	
 	@Column(name="LASTUPDATE_TIMESTAMP")
-	private Date jtsaUpdateDate;
+	private Date jhsaUpdateDate;
 	
 	@Column(name="IF_RESCHEDULING",length=2)
-	private String jtsaIfrescheduling;
+	private String jhsaIfrescheduling;
 	
 	@Column(name="BIAYA_ADMIN")
-	private Integer jtsaBiayaAdmin;
+	private Integer jhsaBiayaAdmin;
 	
 	@Column(name="BIAYA_BPKB")
-	private Integer jtsaBiayaBpkb;
+	private Integer jhsaBiayaBpkb;
 	
 	@Column(name="IS_ACTUAL_DAY",length=1)
-	private String jtsaIsActualDay;
+	private String jhsaIsActualDay;
 	
 	@Column(name="BIAYA_ADMIN_TYPE",length=3)
-	private String jtsaBiayaAdminType;
+	private String jhsaBiayaAdminType;
 	
 	@Column(name="BIAYA_BPKB_TYPE",length=3)
-	private String jtsaBiayaBpkbType;
+	private String jhsaBiayaBpkbType;
 	
 	@Column(name="IF_PRETERM",length=2)
-	private String jtsaIfPreterm;
+	private String jhsaIfPreterm;
 	
 	@Column(name="IF_CHG_DUEDATE",length=2)
-	private String jtsaIfChgDueDate;
+	private String jhsaIfChgDueDate;
 	
 	@Column(name="DP_MINIMAL",length=2)
-	private Integer jtsaDpMinimal;
+	private Integer jhsaDpMinimal;
 	
 	@Column(name="DISC_INT_FLAG",length=2)
-	private String jtsaDiscIntFlag;
+	private String jhsaDiscIntFlag;
 	
 	@Column(name="INST_NO_DISC")
-	private Integer jtsaInstNoDisc;
+	private Integer jhsaInstNoDisc;
 	
 	@Column(name="FORMULA_DP",length=100)
-	private String jtsaFormulaDp;
+	private String jhsaFormulaDp;
 	
 	@Column(name="IF_REVERSE",length=2)
-	private String jtsaIfReverse;
+	private String jhsaIfReverse;
 
-	
-	
-	
 }

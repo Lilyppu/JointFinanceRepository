@@ -9,10 +9,11 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
-import com.JointFinance.Models.JFTrnSofCps;
-import com.JointFinance.Models.JFTrnSofCpsCompKey;
-public interface IJFTrnSofCpsRepository extends JpaRepository<JFTrnSofCps, JFTrnSofCpsCompKey> {
+import com.JointFinance.Models.JfTrnSofAddedums;
+import com.JointFinance.Models.JfTrnSofAddedumsCompKey;
+
+public interface IJfTrnSofAddedumsRepository extends JpaRepository<JfTrnSofAddedums,JfTrnSofAddedumsCompKey>{
 	
-	public Optional<JFTrnSofCps> findByJtscSofCodeAndJtscSeqno (String code, Integer seq);
+	public Optional<JfTrnSofAddedums> findByJtsaSofCodeAndJtsaSeqno (String code, Integer seq);
 
 }
