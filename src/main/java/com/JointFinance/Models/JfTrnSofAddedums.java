@@ -100,8 +100,6 @@ public class JfTrnSofAddedums {
 	@Column(name="PUTBACK_FLAG",length=1)
 	private String jtsaPutBackFlag;
 	
-	@Column(name="JTSA_SYARIAH_FLAG",length=1)
-	private String jtsaSyariahFlag;
 	
 	@Column(name="IF_AYD",length=2)
 	private String jtsaIfAyd;
@@ -201,6 +199,8 @@ public class JfTrnSofAddedums {
 	
 	@Column(name="IF_REVERSE",length=2)
 	private String jtsaIfReverse;
+	
+
 
 	
 	

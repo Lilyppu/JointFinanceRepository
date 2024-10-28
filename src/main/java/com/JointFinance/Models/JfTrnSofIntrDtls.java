@@ -42,8 +42,8 @@ public class JfTrnSofIntrDtls {
 	@Column(name="INTR_EFF")
 	private BigDecimal jtsidIntrEff;
 	
-	@Column(name="DESCRIPTION")
-	private BigDecimal jtsidDescription;
+	@Column(name="DESCRIPTION",length=100)
+	private String jtsidDescription;
 	
 	@Column(name="CREATED_BY",length=15)
 	private String jtsidCreateBy;
