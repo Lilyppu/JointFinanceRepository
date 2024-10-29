@@ -28,5 +28,25 @@ public class ControllerJfTrnSofHdrs {
 		return servJTSH.getJtshSingle(code);
 	}
 	
+	@GetMapping("/jf/getJtshBySofCode")
+	public List<JfTrnSofHdrs> getJtshBySofcode(String code){
+		return servJTSH.getJtshBySofcode(code);
+	}
+	
+	@GetMapping("/jf/getJtshByAlias")
+	public List<JfTrnSofHdrs> getJtshByAlias(String alias){
+		return servJTSH.getJtshByAlias(alias);
+	}
+	
+	@GetMapping("/jf/getJtshStatus")
+	public List<JfTrnSofHdrs> getJtshByStatus(String status){
+		return servJTSH.getJtshByStatus(status);
+	}
+	
+	@GetMapping("/jf/getJtshByPlatform")
+	public List<JfTrnSofHdrs> getJtshByPlatform(String platform){
+		return servJTSH.getJtshByPlatform(platform);
+	}
+	
 
 }

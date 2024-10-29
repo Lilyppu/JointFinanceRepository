@@ -22,5 +22,20 @@ public class ServiceJfTrnSofHdrs {
 		return repoJTSH.findById(code);
 	}
 	
+	public List<JfTrnSofHdrs> getJtshBySofcode(String code){
+		return repoJTSH.findByJtshSofCodeContaining(code);
+	}
+	
+	public List<JfTrnSofHdrs> getJtshByAlias(String alias){
+		return repoJTSH.findByJtshAliasContaining(alias);
+	}
+	
+	public List<JfTrnSofHdrs> getJtshByStatus(String status){
+		return repoJTSH.findByJtshJfStatusContaining(status);
+	}
+	
+	public List<JfTrnSofHdrs> getJtshByPlatform(String platform){
+		return repoJTSH.findByJtshPlatformContaining(platform);
+	}
 
 }
