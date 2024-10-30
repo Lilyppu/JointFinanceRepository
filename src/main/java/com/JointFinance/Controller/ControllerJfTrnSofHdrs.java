@@ -48,5 +48,10 @@ public class ControllerJfTrnSofHdrs {
 		return servJTSH.getJtshByPlatform(platform);
 	}
 	
+	@PostMapping("/jf/saveupdateSofHdr")
+	public String saveUpdateTrSofHdrs(@RequestBody JfTrnSofHdrs sofhdr) {
+		return servJTSH.saveUpdateTrSofHdrs(sofhdr);
+	}
+	
 
 }

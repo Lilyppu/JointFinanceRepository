@@ -37,5 +37,11 @@ public class ServiceJfTrnSofHdrs {
 	public List<JfTrnSofHdrs> getJtshByPlatform(String platform){
 		return repoJTSH.findByJtshPlatformContaining(platform);
 	}
+	
+	
+	public String saveUpdateTrSofHdrs(JfTrnSofHdrs sofhdr) {
+		repoJTSH.save(sofhdr);
+		return "Submit Successfully";
+	}
 
 }
