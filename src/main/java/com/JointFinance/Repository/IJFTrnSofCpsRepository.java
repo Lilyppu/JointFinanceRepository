@@ -14,5 +14,8 @@ import com.JointFinance.Models.JFTrnSofCpsCompKey;
 public interface IJFTrnSofCpsRepository extends JpaRepository<JFTrnSofCps, JFTrnSofCpsCompKey> {
 	
 	public Optional<JFTrnSofCps> findByJtscSofCodeAndJtscSeqno (String code, Integer seq);
+	
+	public List<JFTrnSofCps> findByJtscSofCode (String code);
+	
 
 }

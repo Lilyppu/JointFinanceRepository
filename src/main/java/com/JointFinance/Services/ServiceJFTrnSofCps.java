@@ -22,5 +22,14 @@ public class ServiceJFTrnSofCps {
 	public Optional<JFTrnSofCps> getJtscSingle(String code, Integer seq){
 		return repoJTSC.findByJtscSofCodeAndJtscSeqno(code, seq);
 	}
+	
+	public List<JFTrnSofCps> getJtscListBySofCode(String code){
+		return repoJTSC.findByJtscSofCode(code);
+	}
+	
+	public String saveUpdateJtsc(JFTrnSofCps jtsc) {
+		repoJTSC.save(jtsc);
+		return "Submit Successfuly";
+	}
 
 }

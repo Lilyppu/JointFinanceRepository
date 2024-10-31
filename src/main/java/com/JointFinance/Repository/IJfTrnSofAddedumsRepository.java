@@ -15,5 +15,7 @@ import com.JointFinance.Models.JfTrnSofAddedumsCompKey;
 public interface IJfTrnSofAddedumsRepository extends JpaRepository<JfTrnSofAddedums,JfTrnSofAddedumsCompKey>{
 	
 	public Optional<JfTrnSofAddedums> findByJtsaSofCodeAndJtsaSeqno (String code, Integer seq);
+	
+	public List<JfTrnSofAddedums> findByJtsaSofCode (String code);
 
 }

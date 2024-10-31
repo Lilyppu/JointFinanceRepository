@@ -26,5 +26,16 @@ public class ControllerJFTrnSofCps {
 	public Optional<JFTrnSofCps> getJtscSingle(String code, Integer seq){
 		return servJTSC.getJtscSingle(code, seq);
 	}
+	
+	@GetMapping("/jf/getJtscListBySofCode")
+	public List<JFTrnSofCps> getJtscListBySofCode(String code){
+		return servJTSC.getJtscListBySofCode(code);
+	}
+	
+	@PostMapping("/jf/saveupdateJtsc")
+	public String saveUpdateJtsc(@RequestBody JFTrnSofCps jtsc) {
+		return servJTSC.saveUpdateJtsc(jtsc);
+		
+	}
 
 }

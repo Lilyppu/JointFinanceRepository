@@ -24,8 +24,18 @@ public class ControllerJfTrnSofBas {
 	}
 	
 	@GetMapping("/jf/getJtsbSingle")
-	public Optional<JfTrnSofBas> getJtsbSingle(String sof, Integer seq, String acc){
-		return servJTSB.getJtsbSingle(sof, seq, acc);
+	public Optional<JfTrnSofBas> getJtsbSingle(String code, Integer seq, String acc){
+		return servJTSB.getJtsbSingle(code, seq, acc);
+	}
+	
+	@GetMapping("/jf/getJtsbBySofcodeAndSeq")
+	public List<JfTrnSofBas> getJtsbBySofCodeAndSeq(String code, Integer seq){
+		return servJTSB.getJtsbBySofCodeAndSeq(code, seq);
+	}
+	
+	@PostMapping("/jf/saveupdateJtsb")
+	public String saveUpdateJtsb (@RequestBody JfTrnSofBas jtsb) {		
+		return servJTSB.saveUpdateJtsb(jtsb);
 	}
 
 }
