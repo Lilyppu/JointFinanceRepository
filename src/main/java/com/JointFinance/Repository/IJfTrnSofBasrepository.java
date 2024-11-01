@@ -18,5 +18,7 @@ import com.JointFinance.Models.JfTrnSofParamDtlsCompKey;
 public interface IJfTrnSofBasrepository extends JpaRepository<JfTrnSofBas, JfTrnSofBasCompKey>{
 	
 	public Optional<JfTrnSofBas> findByJtsbSofCodeAndJtsbSeqNoAndJtsbAcctNo (String sof, Integer seq, String acc);
+	
+	public List<JfTrnSofBas> findByJtsbSofCodeAndJtsbSeqNo (String sof, Integer seq);
 
 }

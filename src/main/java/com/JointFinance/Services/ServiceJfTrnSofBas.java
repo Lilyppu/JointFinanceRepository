@@ -22,5 +22,14 @@ public class ServiceJfTrnSofBas {
 		return repoJTSB.findByJtsbSofCodeAndJtsbSeqNoAndJtsbAcctNo(sof, seq, acc);
 	}
 	
+	public List<JfTrnSofBas> getJtsbBySofCodeAndSeq(String sof, Integer seq){
+		return repoJTSB.findByJtsbSofCodeAndJtsbSeqNo(sof, seq);
+	}
+	
+	public String saveUpdateJtsb (JfTrnSofBas jtsb) {
+		repoJTSB.save(jtsb);
+		return "Submit Successfuly";
+	}
+	
 	
 }

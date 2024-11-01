@@ -22,6 +22,11 @@ public class ControllerJfTrnSofAddedums {
 		return servJTSA.getJtsaAll();
 	}
 	
+	@GetMapping("/jf/getJtsaListBySofCode")
+	public List<JfTrnSofAddedums> getJtsaListBySofCode(String code){
+		return servJTSA.getJtsaListBySofCode(code);
+	}
+	
 	@GetMapping("/jf/getJtsaSingle")
 	public Optional<JfTrnSofAddedums> getJtsaSingle(String code, Integer seq){
 		return servJTSA.getJtsaSingle(code, seq);
