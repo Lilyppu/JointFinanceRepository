@@ -24,69 +24,69 @@ public class TrMstCpBranches {
 
 	@Id
 	@Column(name="CP_CODE",length=5,nullable = false)
-	private String tmcbCpCode;
+	private String tmcbrCpCode;
 	
 	@Id
 	@Column(name="BRANCH_ID",nullable = false)
-	private Integer tmcbBranchId;
+	private Integer tmcbrBranchId;
 	
 	@Column(name="BRANCH_NAME",length=50)
-	private String tmcbBranch;
+	private String tmcbrBranch;
 	
 	@Column(name="ADDRESS_1",length=100)
-	private String tmcbAddress1;
+	private String tmcbrAddress1;
 	
 	@Column(name="ADDRESS_2",length=100)
-	private String tmcbAddress2;
+	private String tmcbrAddress2;
 	
 	@Column(name="ADDRESS_3",length=100)
-	private String tmcbAddress3;
+	private String tmcbrAddress3;
 	
 	@Column(name="LOCATION",length=100)
-	private String tmcbLocation;
+	private String tmcbrLocation;
 	
 	@Column(name="CITY",length=100)
-	private String tmcbCity;
+	private String tmcbrCity;
 	
 	@Column(name="COUNTRY",length=100)
-	private String tmcbCounty;
+	private String tmcbrCounty;
 	
 	@Column(name="PHONE_1",length=20)
-	private String tmcbPhone1;
+	private String tmcbrPhone1;
 	
 	@Column(name="PHONE_2",length=20)
-	private String tmcbPhone2;
+	private String tmcbrPhone2;
 	
 	@Column(name="FAX_1",length=20)
-	private String tmcbFax1;
+	private String tmcbrFax1;
 	
 	@Column(name="FAX_2",length=20)
-	private String tmcbFax2;
+	private String tmcbrFax2;
 	
 	@Column(name="BI_CODE",length=5)
-	private String tmcbBiCode;
+	private String tmcbrBiCode;
 
 	@Column(name="STATUS_FLAG",length=1)
-	private String tmcbStatusFlag;
+	private String tmcbrStatusFlag;
 	
 	@Column(name="ZIP_CODE",length=7)
-	private String tmcbZipCode;
+	private String tmcbrZipCode;
 	
 	@Column(name="CITY_ID",length=5)
-	private String tmcbCityId;
+	private String tmcbrCityId;
 	
 	@Column(name="SOURCE_TYPE",length=1)
-	private Character tmcbSourceType;
+	private Character tmcbrSourceType;
 	
 	@Column(name="CREATED_BY",length=15)
-	private String tmcbCreatedBy;
+	private String tmcbrCreatedBy;
 
 	@Column(name="CREATED_TIMESTAMP")
-	private Date tmcbCreatedTimestamp;
+	private Date tmcbrCreatedTimestamp;
 	
 	@Column(name="LASTUPDATE_BY",length=15)
-	private String tmcbLastupdateBy;
+	private String tmcbrLastupdateBy;
 	
 	@Column(name="LASTUPDATE_TIMESTAMP")
-	private Date tmcbLastupdateTimestamp;
+	private Date tmcbrLastupdateTimestamp;
 }

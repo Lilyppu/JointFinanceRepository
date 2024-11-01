@@ -15,6 +15,6 @@ import java.math.BigDecimal;
 @Data
 public class TrMstCpBranchesCompKey implements Serializable {
 
-	private String tmcbCpCode;	
-	private Integer tmcbBranchId;
+	private String tmcbrCpCode;	
+	private Integer tmcbrBranchId;
 }

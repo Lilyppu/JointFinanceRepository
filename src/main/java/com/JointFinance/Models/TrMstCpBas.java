@@ -24,84 +24,84 @@ public class TrMstCpBas {
 	 
 	@Id
     @Column(name = "BANK_NAME", length = 100,nullable = false)
-    private String tmbcBankName;
+    private String tmcbBankName;
 	
 	@Id
     @Column(name = "ACCOUNT_NO", length = 30,nullable = false)
-    private String tmbcAccountNo;
+    private String tmcbAccountNo;
 
     @Column(name = "ACCOUNT_NAME", length = 100)
-    private String tmbcAccountName;
+    private String tmcbAccountName;
 
     @Column(name = "CURRENCY_CODE", length = 3)
-    private String tmbcCurrencyCode;
+    private String tmcbCurrencyCode;
 
     @Column(name = "GL_ACCOUNT_NO", length = 15)
-    private String tmbcGlAccountNo;
+    private String tmcbGlAccountNo;
 
     @Column(name = "ACCOUNT_HOLDER", length = 6)
-    private String tmbcAccountHolder;
+    private String tmcbAccountHolder;
 
     @Column(name = "BANK_BRANCH", length = 100)
-    private String tmbcBankBranch;
+    private String tmcbBankBranch;
 
     @Column(name = "BI_CODE", length = 240)
-    private String tmbcBiCode;
+    private String tmcbBiCode;
 
     @Column(name = "STATUS_FLAG", length = 1)
-    private Character tmbcStatusFlag;
+    private Character tmcbStatusFlag;
 
     @Column(name = "BRANCH_ID")
-    private Integer tmbcBranchId;
+    private Integer tmcbBranchId;
 
     @Column(name = "CP_CODE", length = 5)
-    private String tmbcCpCode;
+    private String tmcbCpCode;
 
     @Column(name = "SEGMENT1", length = 25)
-    private String tmbcSegment1;
+    private String tmcbSegment1;
 
     @Column(name = "SEGMENT2", length = 25)
-    private String tmbcSegment2;
+    private String tmcbSegment2;
 
     @Column(name = "SEGMENT3", length = 25)
-    private String tmbcSegment3;
+    private String tmcbSegment3;
 
     @Column(name = "SEGMENT4", length = 25)
-    private String tmbcSegment4;
+    private String tmcbSegment4;
 
     @Column(name = "SEGMENT6", length = 25)
-    private String tmbcSegment6;
+    private String tmcbSegment6;
 
     @Column(name = "SEGMENT7", length = 25)
-    private String tmbcSegment7;
+    private String tmcbSegment7;
 
     @Column(name = "SEGMENT8", length = 25)
-    private String tmbcSegment8;
+    private String tmcbSegment8;
 
     @Column(name = "APPROVED_BY", length = 15)
-    private String tmbcApprovedBy;
+    private String tmcbApprovedBy;
 
     @Column(name = "APPROVED_TIMESTAMP")
-    private Date tmbcApprovedTimestamp;
+    private Date tmcbApprovedTimestamp;
 
     @Column(name = "BANK_ID", length = 5)
-    private String tmbcBankId;
+    private String tmcbBankId;
 
     @Column(name = "CLASS_CODE", length = 100)
-    private String tmbcClassCode;
+    private String tmcbClassCode;
 
     @Column(name = "CREATED_BY", length = 15)
-    private String tmbcCreatedBy;
+    private String tmcbCreatedBy;
 
     @Column(name = "CREATED_TIMESTAMP")
-    private Date tmbcCreatedTimestamp;
+    private Date tmcbCreatedTimestamp;
 
     @Column(name = "LASTUPDATE_BY", length = 15)
-    private String tmbcLastupdateBy;
+    private String tmcbLastupdateBy;
 
     @Column(name = "LASTUPDATE_TIMESTAMP")
-    private Date tmbcLastupdateTimestamp;
+    private Date tmcbLastupdateTimestamp;
 
     @Column(name = "COV_ID", length = 5)
-    private Integer tmbcCovId;
+    private Integer tmcbCovId;
 	}

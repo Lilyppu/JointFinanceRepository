@@ -15,6 +15,6 @@ import java.math.BigDecimal;
 @Data
 public class TrMstCpBasCompKey implements Serializable {
 
-    private String tmbcBankName;
-    private String tmbcAccountNo;
+    private String tmcbBankName;
+    private String tmcbAccountNo;
 }
