@@ -1,0 +1,24 @@
+package com.JointFinance.Services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.JointFinance.Models.JfMstDpFunction;
+import com.JointFinance.Models.JfMstFifPenFunction;
+import com.JointFinance.Models.JfTrnSofAddedums;
+import com.JointFinance.Repository.IJfMstDpFunctionRepository;
+import com.JointFinance.Repository.IJfMstFifPenFunctionRepository;
+import com.JointFinance.Repository.IJfTrnSofAddedumsRepository;
+
+@Service
+public class ServiceJfMstFifPenFunction {
+	@Autowired
+	IJfMstFifPenFunctionRepository repoJMFPF;
+	
+	public List<JfMstFifPenFunction> getJmfpfList(){
+		return repoJMFPF.findAll();
+	}
+}

@@ -20,5 +20,8 @@ public interface IJfTrnSofBasrepository extends JpaRepository<JfTrnSofBas, JfTrn
 	public Optional<JfTrnSofBas> findByJtsbSofCodeAndJtsbSeqNoAndJtsbAcctNo (String sof, Integer seq, String acc);
 	
 	public List<JfTrnSofBas> findByJtsbSofCodeAndJtsbSeqNo (String sof, Integer seq);
+	
+
+	
 
 }

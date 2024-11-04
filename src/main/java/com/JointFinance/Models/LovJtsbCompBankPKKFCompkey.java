@@ -14,12 +14,10 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class JfTrnSofBasCompKey implements Serializable {
-	
-	private String jtsbSofCode;
-	
-	private Integer jtsbSeqNo;
-	
-	private String jtsbAcctNo;
 
+public class LovJtsbCompBankPKKFCompkey implements Serializable{
+
+	private  String lovJtsbBankPkkfName;
+	
+	private String lovJtsbBankPkkfAccount;
 }

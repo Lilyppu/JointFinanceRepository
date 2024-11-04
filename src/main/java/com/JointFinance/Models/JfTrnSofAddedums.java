@@ -99,8 +99,7 @@ public class JfTrnSofAddedums {
 	
 	@Column(name="PUTBACK_FLAG",length=1)
 	private String jtsaPutBackFlag;
-	
-	
+
 	@Column(name="IF_AYD",length=2)
 	private String jtsaIfAyd;
 	
