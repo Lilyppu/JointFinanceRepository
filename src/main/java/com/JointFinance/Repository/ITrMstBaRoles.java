@@ -13,9 +13,9 @@ import com.JointFinance.Models.TrMstBaRoles;
 import com.JointFinance.Models.TrMstBaRolesCompKey;
 public interface ITrMstBaRoles extends JpaRepository<TrMstBaRoles, TrMstBaRolesCompKey>{
 
-	public Optional<TrMstBaRoles> findByTmbrBankName(String bankName);
-    public Optional<TrMstBaRoles> findByTmbrAccountNo(String accountNo);
-    public Optional<TrMstBaRoles> findByTmbrCpCode(String cpCode);
-    public Optional<TrMstBaRoles> findByTmbrBranchId(Integer branchID);
-    public Optional<TrMstBaRoles> findByTmbrRoleCode(String roleCode);
+	public List<TrMstBaRoles> findByTmbrBankName(String bankname);
+    public List<TrMstBaRoles> findByTmbrAccountNo(String accountno);
+    public List<TrMstBaRoles> findByTmbrCpCode(String cpnode);
+    public List<TrMstBaRoles> findByTmbrBranchId(Integer branchid);
+    public List<TrMstBaRoles> findByTmbrRoleCode(String rolecode);
 }

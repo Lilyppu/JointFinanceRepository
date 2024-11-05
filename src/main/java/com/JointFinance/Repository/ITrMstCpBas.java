@@ -13,6 +13,7 @@ import com.JointFinance.Models.TrMstCpBas;
 import com.JointFinance.Models.TrMstCpBasCompKey;
 public interface ITrMstCpBas extends JpaRepository<TrMstCpBas, TrMstCpBasCompKey>{
 
-	public Optional<TrMstCpBas> findByTmcbBankName(String bankName);
+	public List<TrMstCpBas> findByTmcbBankName(String bankName);
+	
     public Optional<TrMstCpBas> findByTmcbAccountNo(String accountNo);
 }

@@ -52,9 +52,12 @@ public class TrMstBaRoles {
     @Column(name = "CREATED_TIMESTAMP")
     private Date tmbrCreatedTimestamp;
 
-    @Column(name = "LASTUPDATEBY", length = 15)
+    @Column(name = "LASTUPDATE_BY", length = 15)
     private String tmbrLastUpdatedBy;
 
     @Column(name = "LASTUPDATE_TIMESTAMP")
     private Date tmbrLastUpdatedTimestamp;
+    
+    @Column(name = "LASTUPDATEBY", length = 15)
+    private String tmbrLastUpdatedBy2;
 }

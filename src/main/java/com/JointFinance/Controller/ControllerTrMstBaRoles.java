@@ -23,27 +23,27 @@ public class ControllerTrMstBaRoles {
 	}
 	
 	@GetMapping("/tr/getTmbrBankName")
-	public Optional<TrMstBaRoles> getTmbrBankName(String bankname){
+	public List<TrMstBaRoles> getTmbrBankName(String bankname){
 		return servTMBR.getTmbrBankName(bankname);
 	}
 	
 	@GetMapping("/tr/getTmbrAccountNo")
-	public Optional<TrMstBaRoles> getTmbrAccountNo(String accountno){
+	public List<TrMstBaRoles> getTmbrAccountNo(String accountno){
 		return servTMBR.getTmbrAccountNo(accountno);
 	}
 	
 	@GetMapping("/tr/getTmbrCpCode")
-	public Optional<TrMstBaRoles> getTmbrCpCode(String cpcode){
+	public List<TrMstBaRoles> getTmbrCpCode(String cpcode){
 		return servTMBR.getTmbrCpCode(cpcode);
 	}
 	
 	@GetMapping("/tr/getTmbrBranchId")
-	public Optional<TrMstBaRoles> getTmbrBranchId(Integer branchid){
+	public List<TrMstBaRoles> getTmbrBranchId(Integer branchid){
 		return servTMBR.getTmbrBranchId(branchid);
 	}
 	
 	@GetMapping("/tr/getTmbrRoleCode")
-	public Optional<TrMstBaRoles> getTmbrRoleCode(String rolecode){
+	public List<TrMstBaRoles> getTmbrRoleCode(String rolecode){
 		return servTMBR.getTmbrRoleCode(rolecode);
 	}
 }

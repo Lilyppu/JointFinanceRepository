@@ -18,23 +18,23 @@ public class ServiceTrMstBaRoles {
 		return repoTMBR.findAll();
 	}
 	
-	public Optional<TrMstBaRoles> getTmbrBankName(String bankname){
+	public List<TrMstBaRoles> getTmbrBankName(String bankname){
 		return repoTMBR.findByTmbrBankName(bankname);
 	}
 	
-	public Optional<TrMstBaRoles> getTmbrAccountNo(String bankname){
+	public List<TrMstBaRoles> getTmbrAccountNo(String bankname){
 		return repoTMBR.findByTmbrAccountNo(bankname);
 	}
 	
-	public Optional<TrMstBaRoles> getTmbrCpCode(String cpcode){
+	public List<TrMstBaRoles> getTmbrCpCode(String cpcode){
 		return repoTMBR.findByTmbrCpCode(cpcode);
 	}
 	
-	public Optional<TrMstBaRoles> getTmbrBranchId(Integer branchid){
+	public List<TrMstBaRoles> getTmbrBranchId(Integer branchid){
 		return repoTMBR.findByTmbrBranchId(branchid);
 	}
 	
-	public Optional<TrMstBaRoles> getTmbrRoleCode(String rolecode){
+	public List<TrMstBaRoles> getTmbrRoleCode(String rolecode){
 		return repoTMBR.findByTmbrRoleCode(rolecode);
 	}
 }

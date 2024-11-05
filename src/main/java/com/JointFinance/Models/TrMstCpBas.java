@@ -106,7 +106,7 @@ public class TrMstCpBas {
     private Date tmcbLastupdateTimestamp;
 
     @Column(name = "COY_ID", length = 5)
-    private Integer tmcbCoyId;
+    private String tmcbCoyId;
     
     @Column(name = "COV_ID")
     private Integer tmcbCovId;

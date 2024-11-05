@@ -23,17 +23,17 @@ public class ControllerTrMstCpRoles {
 	}
 	
 	@GetMapping("/tr/getTmcrCpCode")
-	public Optional<TrMstCpRoles> getTmcrCpCode(String cpcode){
+	public List<TrMstCpRoles> getTmcrCpCode(String cpcode){
 		return servTMCR.getTmcrCpCode(cpcode);
 	}
 	
 	@GetMapping("/tr/getTmcrBranchId")
-	public Optional<TrMstCpRoles> getTmcrBranchId(Integer branchid){
+	public List<TrMstCpRoles> getTmcrBranchId(Integer branchid){
 		return servTMCR.getTmcrBranchId(branchid);
 	}
 	
 	@GetMapping("/tr/getTmcrRoleCode")
-	public Optional<TrMstCpRoles> getTmcrRoleCode(String rolecode){
+	public List<TrMstCpRoles> getTmcrRoleCode(String rolecode){
 		return servTMCR.getTmcrRoleCode(rolecode);
 	}
 	

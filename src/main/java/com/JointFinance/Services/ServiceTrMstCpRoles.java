@@ -18,15 +18,15 @@ public class ServiceTrMstCpRoles {
 		return repoTMCR.findAll();
 	}
 	
-	public Optional<TrMstCpRoles> getTmcrCpCode(String cpcode){
+	public List<TrMstCpRoles> getTmcrCpCode(String cpcode){
 		return repoTMCR.findByTmcrCpCode(cpcode);
 	}
 	
-	public Optional<TrMstCpRoles> getTmcrBranchId(Integer branchid){
+	public List<TrMstCpRoles> getTmcrBranchId(Integer branchid){
 		return repoTMCR.findByTmcrBranchId(branchid);
 	}
 	
-	public Optional<TrMstCpRoles> getTmcrRoleCode(String rolecode){
+	public List<TrMstCpRoles> getTmcrRoleCode(String rolecode){
 		return repoTMCR.findByTmcrRoleCode(rolecode);
 	}
 }

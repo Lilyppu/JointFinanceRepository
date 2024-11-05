@@ -18,7 +18,7 @@ public class ServiceTrMstCpBas {
 		return repoTMCB.findAll();
 	}
 	
-	public Optional<TrMstCpBas> getTmcbBankName(String bankname){
+	public List<TrMstCpBas> getTmcbBankName(String bankname){
 		return repoTMCB.findByTmcbBankName(bankname);
 	}
 	

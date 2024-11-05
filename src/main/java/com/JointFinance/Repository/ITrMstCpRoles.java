@@ -13,8 +13,8 @@ import com.JointFinance.Models.TrMstCpRoles;
 import com.JointFinance.Models.TrMstCpRolesCompKey;
 public interface ITrMstCpRoles extends JpaRepository<TrMstCpRoles, TrMstCpRolesCompKey> {
 	
-	public Optional<TrMstCpRoles> findByTmcrCpCode(String cpCode);
-    public Optional<TrMstCpRoles> findByTmcrBranchId(Integer branchId);
-    public Optional<TrMstCpRoles> findByTmcrRoleCode(String roleCode);
+	public List<TrMstCpRoles> findByTmcrCpCode(String cpcode);
+    public List<TrMstCpRoles> findByTmcrBranchId(Integer branchid);
+    public List<TrMstCpRoles> findByTmcrRoleCode(String rolecode);
  
 }

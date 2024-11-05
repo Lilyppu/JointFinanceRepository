@@ -27,7 +27,7 @@ public class ControllerTrMstCpBranches {
 		return servTMCBR.getTmcbrCpCode(cpcode);
 	}
 	
-	@GetMapping("/tr/getTmcbrSingle")
+	@GetMapping("/tr/getTmcbrBranchId")
 	public Optional<TrMstCpBranches> getTmcbrBranchId(Integer branchid){
 		return servTMCBR.getTmcbrBranchId(branchid);
 	}

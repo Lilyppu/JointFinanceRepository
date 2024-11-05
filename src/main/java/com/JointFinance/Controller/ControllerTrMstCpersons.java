@@ -22,8 +22,13 @@ public class ControllerTrMstCpersons {
 		return servTMCP.getTmcpAll();
 	}
 	
-	@GetMapping("/tr/getTmcpCode")
-	public Optional<TrMstCpersons> getTmcpCode(String cpcode){
-		return servTMCP.getTmcpCode(cpcode);
+	@GetMapping("/tr/getTmcpCpCode")
+	public Optional<TrMstCpersons> getTmcpCpCode(String cpcode){
+		return servTMCP.getTmcpCpCode(cpcode);
+	}
+	
+	@GetMapping("/tr/getTmcpBranchId")
+	public List<TrMstCpersons> getTmcpBranchId(Integer branchid){
+		return servTMCP.getTmcpBranchId(branchid);
 	}
 }

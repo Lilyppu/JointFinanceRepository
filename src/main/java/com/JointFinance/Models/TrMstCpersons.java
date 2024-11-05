@@ -23,7 +23,7 @@ public class TrMstCpersons {
 
 	@Id
     @Column(name = "CP_CODE", nullable = false, length = 5)
-    private String tmcpCode;
+    private String tmcpCpCode;
 
     @Column(name = "BRANCH_ID", nullable = false)
     private Integer tmcpBranchId;

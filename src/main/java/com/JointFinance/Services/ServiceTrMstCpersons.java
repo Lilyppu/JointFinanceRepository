@@ -18,7 +18,11 @@ public class ServiceTrMstCpersons {
 		return repoTMCP.findAll();
 	}
 	
-	public Optional<TrMstCpersons> getTmcpCode(String cpcode){
-		return repoTMCP.findByTmcpCode(cpcode);
+	public Optional<TrMstCpersons> getTmcpCpCode(String cpcode){
+		return repoTMCP.findByTmcpCpCode(cpcode);
+	}
+	
+	public List<TrMstCpersons> getTmcpBranchId(Integer branchid){
+		return repoTMCP.findByTmcpBranchId(branchid);
 	}
 }

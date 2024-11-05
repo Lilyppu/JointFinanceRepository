@@ -12,5 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.JointFinance.Models.TrMstCpersons;
 public interface ITrMstCpersons extends JpaRepository<TrMstCpersons, String> {
 
-	public Optional<TrMstCpersons> findByTmcpCode(String cpCode);
+	public Optional<TrMstCpersons> findByTmcpCpCode(String cpcode);
+	
+	public List<TrMstCpersons> findByTmcpBranchId(Integer branchid);
 }
