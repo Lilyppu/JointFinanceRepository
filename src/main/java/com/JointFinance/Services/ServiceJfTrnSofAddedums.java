@@ -23,7 +23,7 @@ public class ServiceJfTrnSofAddedums {
 		return repoJTSA.findByJtsaSofCodeAndJtsaSeqno(code, seq);
 	}
 	
-	public List<JfTrnSofAddedums> getJtsaListBySofCode(String code){
+	public Optional<JfTrnSofAddedums> getJtsaListBySofCode(String code){
 		return repoJTSA.findByJtsaSofCode(code);
 	}
 

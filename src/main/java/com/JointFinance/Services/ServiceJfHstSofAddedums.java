@@ -19,8 +19,8 @@ public class ServiceJfHstSofAddedums {
 		return repoJHSA.findAll();
 	}
 	
-	public Optional<JfHstSofAddedums> getJhsaSingle(String sof, Integer seq, Integer ver){
-		return repoJHSA.findByJhsaSofCodeAndJhsaSeqnoAndJhsaVersion(sof, seq, seq);
+	public List<JfHstSofAddedums> getJhsaSingle(String sof, Integer seq){
+		return repoJHSA.findByJhsaSofCodeAndJhsaSeqno(sof, seq);
 	}
 
 }

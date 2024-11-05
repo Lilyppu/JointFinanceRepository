@@ -11,6 +11,9 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
 
 
@@ -37,9 +40,11 @@ public class JfHstSofAddedums {
 	private String jhsaAddendumNo;
 	
 	@Column(name="ADDENDUM_DATE")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date jhsaAddendumDate;
 	
 	@Column(name="EFFECTIVE_DATE")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date jhsaEffectiveDate;
 	
 	@Column(name="PCT_PORTION")
@@ -99,8 +104,6 @@ public class JfHstSofAddedums {
 	@Column(name="PUTBACK_FLAG",length=1)
 	private String jhsaPutBackFlag;
 	
-	@Column(name="JTSA_SYARIAH_FLAG",length=1)
-	private String jhsaSyariahFlag;
 	
 	@Column(name="IF_AYD",length=2)
 	private String jhsaIfAyd;

@@ -16,5 +16,5 @@ import com.JointFinance.Models.JfHstSofAddedumsCompKey;
 
 
 public interface IJfHstSofAddedumsRepository extends JpaRepository<JfHstSofAddedums,JfHstSofAddedumsCompKey>{
-	public Optional<JfHstSofAddedums> findByJhsaSofCodeAndJhsaSeqnoAndJhsaVersion (String code, Integer seq, Integer ver);
+	public List<JfHstSofAddedums> findByJhsaSofCodeAndJhsaSeqno (String code, Integer seq);
 }

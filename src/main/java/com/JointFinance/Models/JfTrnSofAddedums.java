@@ -13,6 +13,9 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
 
 
@@ -38,9 +41,11 @@ public class JfTrnSofAddedums {
 	private String jtsaAddendumNo;
 	
 	@Column(name="ADDENDUM_DATE")
+	 @JsonFormat(pattern = "dd/MM/yyyy")
 	private Date jtsaAddendumDate;
 	
 	@Column(name="EFFECTIVE_DATE")
+	 @JsonFormat(pattern = "dd/MM/yyyy")
 	private Date jtsaEffectiveDate;
 	
 	@Column(name="PCT_PORTION")
@@ -105,9 +110,6 @@ public class JfTrnSofAddedums {
 	
 	@Column(name="VALIDDATE_IS_SYSDATE_PLUS")
 	private Integer jtsaValdateIsSysdatePlus;
-	
-	@Column(name="IF_SOLD",length=2)
-	private String jtsaIfSold;
 	
 	@Column(name="PEN_RATE")
 	private BigDecimal jtsaPenRate;

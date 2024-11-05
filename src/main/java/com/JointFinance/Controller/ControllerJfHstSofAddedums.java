@@ -24,9 +24,9 @@ public class ControllerJfHstSofAddedums {
 		return servJHSA.getJhsaAll();
 	}
 	
-	@GetMapping("/jf/getJhsaSingle")
-	public Optional<JfHstSofAddedums> getJtsbSingle(String sof, Integer seq, Integer ver){
-		return servJHSA.getJhsaSingle(sof, seq, ver);
+	@GetMapping("/jf/getLovJhsaSingle")
+	public List<JfHstSofAddedums> getJtsbSingle(String sof, Integer seq){
+		return servJHSA.getJhsaSingle(sof, seq);
 	}
 	
 }

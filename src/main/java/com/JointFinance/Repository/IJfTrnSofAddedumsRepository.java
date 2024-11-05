@@ -16,6 +16,6 @@ public interface IJfTrnSofAddedumsRepository extends JpaRepository<JfTrnSofAdded
 	
 	public Optional<JfTrnSofAddedums> findByJtsaSofCodeAndJtsaSeqno (String code, Integer seq);
 	
-	public List<JfTrnSofAddedums> findByJtsaSofCode (String code);
+	public Optional<JfTrnSofAddedums> findByJtsaSofCode (String code);
 
 }

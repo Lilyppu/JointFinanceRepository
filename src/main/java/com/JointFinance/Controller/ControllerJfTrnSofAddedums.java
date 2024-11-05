@@ -23,7 +23,7 @@ public class ControllerJfTrnSofAddedums {
 	}
 	
 	@GetMapping("/jf/getJtsaListBySofCode")
-	public List<JfTrnSofAddedums> getJtsaListBySofCode(String code){
+	public Optional<JfTrnSofAddedums> getJtsaListBySofCode(String code){
 		return servJTSA.getJtsaListBySofCode(code);
 	}
 	
