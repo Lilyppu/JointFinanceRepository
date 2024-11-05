@@ -68,6 +68,9 @@ public class TrMstCpBas {
 
     @Column(name = "SEGMENT4", length = 25)
     private String tmcbSegment4;
+    
+    @Column(name = "SEGMENT5", length = 25)
+    private String tmcbSegment5;
 
     @Column(name = "SEGMENT6", length = 25)
     private String tmcbSegment6;
@@ -102,6 +105,9 @@ public class TrMstCpBas {
     @Column(name = "LASTUPDATE_TIMESTAMP")
     private Date tmcbLastupdateTimestamp;
 
-    @Column(name = "COV_ID", length = 5)
+    @Column(name = "COY_ID", length = 5)
+    private Integer tmcbCoyId;
+    
+    @Column(name = "COV_ID")
     private Integer tmcbCovId;
 	}
