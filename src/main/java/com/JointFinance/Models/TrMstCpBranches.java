@@ -31,7 +31,7 @@ public class TrMstCpBranches {
 	private Integer tmcbrBranchId;
 	
 	@Column(name="BRANCH_NAME",length=50)
-	private String tmcbrBranch;
+	private String tmcbrBranchName;
 	
 	@Column(name="ADDRESS_1",length=100)
 	private String tmcbrAddress1;
