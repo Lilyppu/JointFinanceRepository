@@ -32,5 +32,15 @@ public class ControllerJfTrnSofAddedums {
 		return servJTSA.getJtsaSingle(code, seq);
 	}
 	
+	@GetMapping("/jf/runUpdAddedum")
+	public String UpdAddendumChanged(String sof, Integer seq, Integer version) {
+		return servJTSA.updAddendumChanged(sof, seq, version);
+	}
+	
+	@PostMapping("/jf/SaveUpdAddedum")
+	public String saveUpdateAddedum(@RequestBody JfTrnSofAddedums jtsa ) {		
+		return servJTSA.saveUpdateAddedum(jtsa);
+	}
+	
 	
 }

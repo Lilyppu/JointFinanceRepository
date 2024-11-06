@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.JointFinance.Models.JfTrnSofAddedums;
 import com.JointFinance.Repository.IJfTrnSofAddedumsRepository;
@@ -26,5 +27,15 @@ public class ServiceJfTrnSofAddedums {
 	public Optional<JfTrnSofAddedums> getJtsaListBySofCode(String code){
 		return repoJTSA.findByJtsaSofCode(code);
 	}
+	
+	public String updAddendumChanged(String sof, Integer seq, Integer version) {
+		return repoJTSA.runAddVersion(sof, seq, version);
+	}
+	
+	public String saveUpdateAddedum(@RequestBody JfTrnSofAddedums jtsa ) {
+		repoJTSA.save(jtsa);
+		return "Submit Successfully";
+	}
+	
 
 }

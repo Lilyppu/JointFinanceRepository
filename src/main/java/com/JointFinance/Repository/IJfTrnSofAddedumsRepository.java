@@ -17,5 +17,8 @@ public interface IJfTrnSofAddedumsRepository extends JpaRepository<JfTrnSofAdded
 	public Optional<JfTrnSofAddedums> findByJtsaSofCodeAndJtsaSeqno (String code, Integer seq);
 	
 	public Optional<JfTrnSofAddedums> findByJtsaSofCode (String code);
+	
+	@Procedure(procedureName = "JF_FACILITYF_PKG.ADD_VERSION")
+	public String runAddVersion(String sof, Integer seq, Integer version);	
 
 }
