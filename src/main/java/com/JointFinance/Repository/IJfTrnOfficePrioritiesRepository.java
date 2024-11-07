@@ -15,6 +15,8 @@ import com.JointFinance.Models.JfTrnOfficePrioritiesCompKey;
 
 
 public interface IJfTrnOfficePrioritiesRepository extends JpaRepository<JfTrnOfficePriorities,JfTrnOfficePrioritiesCompKey>{
-	public Optional<JfTrnOfficePriorities> findByJtopOfficeCodeAndJtopSofCode (String off, String sof);
+	public List<JfTrnOfficePriorities> findByJtopSofCode (String sof);
+	
+	public Optional<JfTrnOfficePriorities> findByJtopSofCodeAndJtopOfficeCode (String sof, String off);
 
 }

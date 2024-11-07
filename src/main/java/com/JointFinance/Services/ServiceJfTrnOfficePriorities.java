@@ -20,8 +20,17 @@ public class ServiceJfTrnOfficePriorities {
 		return repoJTOP.findAll();
 	}
 	
-	public Optional<JfTrnOfficePriorities> getJtopSingle(String off, String sof){
-		return repoJTOP.findByJtopOfficeCodeAndJtopSofCode(off, sof);
+	public Optional<JfTrnOfficePriorities> getJtopSingle( String sof, String off){
+		return repoJTOP.findByJtopSofCodeAndJtopOfficeCode(sof, off);
+	}
+	
+	public List<JfTrnOfficePriorities> getJtopBySofCode( String sof){
+		return repoJTOP.findByJtopSofCode( sof);
+	}
+	
+	public String updateSaverJtop( JfTrnOfficePriorities jtop){
+		 repoJTOP.save(jtop);
+		return "Submit Successflly";
 	}
 	
 }

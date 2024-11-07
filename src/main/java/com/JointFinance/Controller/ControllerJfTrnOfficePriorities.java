@@ -25,8 +25,18 @@ public class ControllerJfTrnOfficePriorities {
 	}
 	
 	@GetMapping("/jf/getJtopSingle")
-	public Optional<JfTrnOfficePriorities> getJtopSingle(String off, String sof){
-		return ServJTOP.getJtopSingle(off, sof);
+	public Optional<JfTrnOfficePriorities> getJtopSingle( String sof, String off){
+		return ServJTOP.getJtopSingle(sof, off);
+	}
+	
+	@GetMapping("/jf/getJtopBySofCode")
+	public List<JfTrnOfficePriorities> getJtopBySofCode( String sof){
+		return ServJTOP.getJtopBySofCode(sof);
+	}
+	
+	@PostMapping("/jf/saveUpdateJtop")
+	public String updateSaverJtop(@RequestBody JfTrnOfficePriorities jtop){
+		return ServJTOP.updateSaverJtop(jtop);
 	}
 	
 }
