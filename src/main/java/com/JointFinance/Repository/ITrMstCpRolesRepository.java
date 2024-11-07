@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.JointFinance.Models.TrMstCpRoles;
 import com.JointFinance.Models.TrMstCpRolesCompKey;
-public interface ITrMstCpRoles extends JpaRepository<TrMstCpRoles, TrMstCpRolesCompKey> {
+public interface ITrMstCpRolesRepository extends JpaRepository<TrMstCpRoles, TrMstCpRolesCompKey> {
 	
 	public List<TrMstCpRoles> findByTmcrCpCode(String cpcode);
     public List<TrMstCpRoles> findByTmcrBranchId(Integer branchid);

@@ -9,8 +9,11 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
-import com.JointFinance.Models.TrMstCounterparties;
-public interface ITrMstCounterparties extends JpaRepository<TrMstCounterparties, String>{
+import com.JointFinance.Models.TrMstCpBas;
+import com.JointFinance.Models.TrMstCpBasCompKey;
+public interface ITrMstCpBasRepository extends JpaRepository<TrMstCpBas, TrMstCpBasCompKey>{
 
-	public Optional<TrMstCounterparties> findByTmcCpCode(String cpCode);
+	public List<TrMstCpBas> findByTmcbBankName(String bankName);
+	
+    public Optional<TrMstCpBas> findByTmcbAccountNo(String accountNo);
 }

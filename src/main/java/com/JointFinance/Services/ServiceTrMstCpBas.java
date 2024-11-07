@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.JointFinance.Models.TrMstCpBas;
-import com.JointFinance.Repository.ITrMstCpBas;
+import com.JointFinance.Repository.ITrMstCpBasRepository;
 
 @Service
 public class ServiceTrMstCpBas {
 	@Autowired
-	ITrMstCpBas repoTMCB;
+	ITrMstCpBasRepository repoTMCB;
 	
 	public List<TrMstCpBas> getTmcbAll(){
 		return repoTMCB.findAll();

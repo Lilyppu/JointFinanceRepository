@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.JointFinance.Models.TrMstCpRoles;
-import com.JointFinance.Repository.ITrMstCpRoles;
+import com.JointFinance.Repository.ITrMstCpRolesRepository;
 
 @Service
 public class ServiceTrMstCpRoles {
 	@Autowired
-	ITrMstCpRoles repoTMCR;
+	ITrMstCpRolesRepository repoTMCR;
 	
 	public List<TrMstCpRoles> getTmcrAll(){
 		return repoTMCR.findAll();

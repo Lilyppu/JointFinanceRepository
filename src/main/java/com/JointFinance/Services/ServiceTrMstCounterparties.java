@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.JointFinance.Models.TrMstCounterparties;
-import com.JointFinance.Repository.ITrMstCounterparties;
+import com.JointFinance.Repository.ITrMstCounterpartiesRepository;
 
 @Service
 public class ServiceTrMstCounterparties {
 	@Autowired
-	ITrMstCounterparties repoTMC;
+	ITrMstCounterpartiesRepository repoTMC;
 	
 	public List<TrMstCounterparties> getTmcAll(){
 		return repoTMC.findAll();
@@ -20,6 +20,10 @@ public class ServiceTrMstCounterparties {
 	
 	public Optional<TrMstCounterparties> getTmcSingle(String cpcode){
 		return repoTMC.findByTmcCpCode(cpcode);
+	}
+	
+	public List<TrMstCounterparties> getTmcCpCodeList(String cpcode){
+		return repoTMC.findByTmcCpCodeContaining(cpcode);
 	}
 	
 }

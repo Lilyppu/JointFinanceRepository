@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.JointFinance.Models.TrMstBaRoles;
-import com.JointFinance.Repository.ITrMstBaRoles;
+import com.JointFinance.Repository.ITrMstBaRolesRepository;
 
 @Service
 public class ServiceTrMstBaRoles {
 	@Autowired
-	ITrMstBaRoles repoTMBR;
+	ITrMstBaRolesRepository repoTMBR;
 	
 	public List<TrMstBaRoles> getTmbrAll(){
 		return repoTMBR.findAll();

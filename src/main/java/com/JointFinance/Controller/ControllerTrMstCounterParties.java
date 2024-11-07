@@ -27,4 +27,10 @@ public class ControllerTrMstCounterParties {
 	public Optional<TrMstCounterparties> getTmcSingle(String cpcode){
 		return servTMC.getTmcSingle(cpcode);
 	}
+	
+	@GetMapping("/tr/getTmcCpCodeList")
+	public List<TrMstCounterparties> getTmcCpCodeList(String cpcode){
+		return servTMC.getTmcCpCodeList(cpcode);
+	}
+	
 }

@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.JointFinance.Models.TrMstCpBranches;
-import com.JointFinance.Repository.ITrMstCpBranches;
+import com.JointFinance.Repository.ITrMstCpBranchesRepository;
 
 @Service
 public class ServiceTrMstCpBranches {
 	@Autowired
-	ITrMstCpBranches repoTMCBR;
+	ITrMstCpBranchesRepository repoTMCBR;
 	
 	public List<TrMstCpBranches> getTmcbrAll(){
 		return repoTMCBR.findAll();

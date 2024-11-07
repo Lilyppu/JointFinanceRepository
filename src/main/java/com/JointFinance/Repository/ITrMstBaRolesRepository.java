@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.JointFinance.Models.TrMstBaRoles;
 import com.JointFinance.Models.TrMstBaRolesCompKey;
-public interface ITrMstBaRoles extends JpaRepository<TrMstBaRoles, TrMstBaRolesCompKey>{
+public interface ITrMstBaRolesRepository extends JpaRepository<TrMstBaRoles, TrMstBaRolesCompKey>{
 
 	public List<TrMstBaRoles> findByTmbrBankName(String bankname);
     public List<TrMstBaRoles> findByTmbrAccountNo(String accountno);
