@@ -30,5 +30,10 @@ public class ControllerJfTrnSofParameters {
 		return servJTSP.getJtphSingle(sof, ver, seq);
 	}
 	
+	@GetMapping("/jf/getJtspBySofCode")
+	public List<JfTrnSofParameters> getJtphBySofCode(String sof){
+		return servJTSP.getJtphBySofCode(sof);
+	}
+	
 	
 }

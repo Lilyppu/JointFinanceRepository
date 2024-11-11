@@ -25,4 +25,8 @@ public class ServiceJfTrnSofParameters {
 		return repoJTSP.findByJtspSofCodeAndJtspVerAndJtspSeqNo(sof, ver, seq);
 	}
 	
+	public List<JfTrnSofParameters> getJtphBySofCode(String sof){
+		return repoJTSP.findByJtspSofCode(sof);
+	}
+	
 }

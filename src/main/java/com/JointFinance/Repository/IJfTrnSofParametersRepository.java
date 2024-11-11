@@ -17,4 +17,6 @@ import com.JointFinance.Models.JfTrnSofParametersCompKey;
 public interface IJfTrnSofParametersRepository extends JpaRepository<JfTrnSofParameters, JfTrnSofParametersCompKey> {
 
 	public Optional<JfTrnSofParameters> findByJtspSofCodeAndJtspVerAndJtspSeqNo (String sof, Integer ver, Integer seq);
+	
+	public List<JfTrnSofParameters> findByJtspSofCode (String sof);
 }
