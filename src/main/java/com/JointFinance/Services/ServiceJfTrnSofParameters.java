@@ -29,4 +29,9 @@ public class ServiceJfTrnSofParameters {
 		return repoJTSP.findByJtspSofCode(sof);
 	}
 	
+	public String saveUpdateJtsph(JfTrnSofParameters jtsph){
+		 repoJTSP.save(jtsph);
+		 return "Submit Successfully";
+	}
+	
 }

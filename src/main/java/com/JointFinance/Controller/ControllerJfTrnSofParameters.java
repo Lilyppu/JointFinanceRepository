@@ -35,5 +35,8 @@ public class ControllerJfTrnSofParameters {
 		return servJTSP.getJtphBySofCode(sof);
 	}
 	
-	
+	@PostMapping("/jf/SaveUpdJtsph")
+	public String getJtphBySofCode(@RequestBody JfTrnSofParameters jtsph){
+		return servJTSP.saveUpdateJtsph(jtsph);
+	}
 }
