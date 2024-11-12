@@ -30,4 +30,8 @@ public class ControllerJfTrnSofIntrRates {
 		return servJTSIR.getJtsirSingle(code, seq);
 	}
 
+	@GetMapping("/jf/getJtsirBySofCode")
+	public List<JfTrnSofIntrRates> getJtsirBySofCode(String sof){
+		return servJTSIR.getJtsirBySofCode(sof);
+	}
 }

@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "JF_TRN_SOF_INT_RATES")
+@Table(name = "JF_TRN_SOF_INTR_RATES")
 @IdClass(JfTrnSofIntrRatesCompKey.class)
 public class JfTrnSofIntrRates {
 	

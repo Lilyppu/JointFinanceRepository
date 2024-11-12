@@ -23,4 +23,8 @@ public class ServiceJfTrnSofIntrRates {
 		return repoJTSIR.findByJtsirSofCodeAndJtsirSeqno(code, seq);
 	}
 	
+	public List<JfTrnSofIntrRates> getJtsirBySofCode(String sof){
+		return repoJTSIR.findByJtsirSofCode(sof);
+	}
+	
 }

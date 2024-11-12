@@ -14,6 +14,6 @@ import com.JointFinance.Models.JfTrnSofIntrDtlsCompKey;
 
 public interface IJfTrnSofIntrDtlsRepository extends JpaRepository<JfTrnSofIntrDtls, JfTrnSofIntrDtlsCompKey> {
 	
-	public Optional<JfTrnSofIntrDtls> findByJtsidSofCodeAndJtsidSeqno (String code, Integer seq);
+	public List<JfTrnSofIntrDtls> findByJtsidSofCodeAndJtsidSeqnoAndJtsidIntrNo (String sof, Integer seq, Integer no);
 
 }

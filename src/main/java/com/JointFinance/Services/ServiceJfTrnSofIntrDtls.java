@@ -18,8 +18,8 @@ public class ServiceJfTrnSofIntrDtls {
 		return repoJTSID.findAll();
 	}
 	
-	public Optional<JfTrnSofIntrDtls> getJtsidSingle(String code, Integer seq){
-		return repoJTSID.findByJtsidSofCodeAndJtsidSeqno(code, seq);
+	public List<JfTrnSofIntrDtls> getJtsidList(String sof, Integer seq, Integer no){
+		return repoJTSID.findByJtsidSofCodeAndJtsidSeqnoAndJtsidIntrNo(sof, seq, no);
 	}
 	
 	
