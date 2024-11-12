@@ -16,4 +16,6 @@ import com.JointFinance.Models.JfTrnSofIntrRatesCompKey;
 public interface IJfTrnSofIntrRatesRepository extends JpaRepository<JfTrnSofIntrRates,JfTrnSofIntrRatesCompKey>{
 
 	public Optional<JfTrnSofIntrRates> findByJtsirSofCodeAndJtsirSeqno(String code, Integer seq);
+	
+	public List<JfTrnSofIntrRates> findByJtsirSofCode(String sof);
 }

@@ -23,9 +23,9 @@ public class ControllerJfTrnSofIntrDtls {
 		return servJTSID.getJtsidAll();
 	}
 	
-	@GetMapping("/jf/getJtsidSingle")
-	public Optional<JfTrnSofIntrDtls> getJtsidSingle(String code, Integer seq){
-		return servJTSID.getJtsidSingle(code, seq);
+	@GetMapping("/jf/getJtsidList")
+	public List<JfTrnSofIntrDtls> getJtsidList(String sof, Integer seq, Integer no){
+		return servJTSID.getJtsidList(sof, seq, no);
 	}
 	
 }
