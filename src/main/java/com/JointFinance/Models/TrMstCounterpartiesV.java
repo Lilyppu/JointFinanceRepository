@@ -26,7 +26,7 @@ import java.math.BigDecimal;
 @Table(name = "TR_MST_COUNTERPARTIES_V")
 public class TrMstCounterpartiesV {
 
-	 @Id
+	 	@Id
 	    @Column(name = "CP_CODE")
 	    private String tmcvCpCode;
 
