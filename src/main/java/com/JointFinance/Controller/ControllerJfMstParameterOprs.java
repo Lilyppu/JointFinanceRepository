@@ -34,5 +34,11 @@ public class ControllerJfMstParameterOprs {
 	public String saveUpdateJfMstParamOprs(@RequestBody JfMstParameterOprs jmstparamoprs) {
 		return servJMPO.saveUpdateJfMstParamOprs(jmstparamoprs);
 	}
+	
+	@GetMapping("/jf/DelParamOprSingle")
+	public String getDelJmpo(String code, String oprs) {
+		servJMPO.getDelJmpo(code, oprs);
+		return "Delete Successfully";
+	}
 
 }

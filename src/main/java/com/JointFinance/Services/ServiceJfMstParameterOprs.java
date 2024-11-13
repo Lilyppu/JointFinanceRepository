@@ -27,5 +27,10 @@ public class ServiceJfMstParameterOprs {
 		repoJmpo.save(jmstparamoprs);
 		return "Submit Successfully";
 	}
+	
+	public String getDelJmpo(String code, String oprs) {
+		repoJmpo.getDelJmpoOprs(code, oprs);
+		return "Delete Successfully";
+	}
 
 }
