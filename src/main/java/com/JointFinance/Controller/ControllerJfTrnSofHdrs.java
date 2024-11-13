@@ -48,6 +48,11 @@ public class ControllerJfTrnSofHdrs {
 		return servJTSH.getJtshByPlatform(platform);
 	}
 	
+	@GetMapping("/jf/getLovSoftCode")
+	public List<JfTrnSofHdrs> getLovSoft(String cpcode){
+		return servJTSH.getLovSoft(cpcode);
+	}
+	
 	@PostMapping("/jf/saveupdateSofHdr")
 	public String saveUpdateTrSofHdrs(@RequestBody JfTrnSofHdrs sofhdr) {
 		return servJTSH.saveUpdateTrSofHdrs(sofhdr);

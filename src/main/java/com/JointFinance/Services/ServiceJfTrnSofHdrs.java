@@ -38,6 +38,9 @@ public class ServiceJfTrnSofHdrs {
 		return repoJTSH.findByJtshPlatformContaining(platform);
 	}
 	
+	public List<JfTrnSofHdrs> getLovSoft(String cpcode){
+		return repoJTSH.getLovSoft(cpcode);
+	}
 	
 	public String saveUpdateTrSofHdrs(JfTrnSofHdrs sofhdr) {
 		repoJTSH.save(sofhdr);
