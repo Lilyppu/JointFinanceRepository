@@ -21,6 +21,8 @@ public interface IJfTrnBpPtHdrsRepository extends JpaRepository<JfTrnBpPtHdrs,St
 	@Query(value="SELECT aa.* FROM JF_TRN_BP_PT_HDRS AA WHERE PT_NO =:ptno AND EXISTS (SELECT 1 FROM V_JF_PRETERM_RANGE_VIEW BB WHERE BB.PT_NO=AA.PT_NO)", nativeQuery = true )
 	public List<JfTrnBpPtHdrs> getJtbphByNo(String ptno);
 	
+	public Optional<JfTrnBpPtHdrs> findByJtbphNo (String ptno);
+	
 	public List<JfTrnBpPtHdrs> findByJtbphStatus(String Stat);
 	
 	public List<JfTrnBpPtHdrs> findByJtbphSofCode(String sof);

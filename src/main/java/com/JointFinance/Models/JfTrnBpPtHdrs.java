@@ -52,6 +52,7 @@ public class JfTrnBpPtHdrs {
 	private String jtbphCreatedBy;
 	
 	@Column(name="CREATED_TIMESTAMP")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date jtbphCreateDate;
 	
 	@Column(name="LASTUPDATE_BY", length=15)

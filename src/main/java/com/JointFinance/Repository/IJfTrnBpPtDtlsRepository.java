@@ -15,5 +15,6 @@ import com.JointFinance.Models.JfTrnBpPtDtlsCompKey;
 @Repository
 public interface IJfTrnBpPtDtlsRepository extends JpaRepository<JfTrnBpPtDtls,JfTrnBpPtDtlsCompKey>{
 
+	public List<JfTrnBpPtDtls> findByJtbpdNo(String ptno);
 
 }

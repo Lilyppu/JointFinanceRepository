@@ -23,12 +23,22 @@ public class ServiceJfTrnBpPtHdrs {
 		return repoJTBPH.getJtbphByNo(ptno);
 	}
 	
+	public Optional<JfTrnBpPtHdrs> getJtbpdSingle(String ptno){	
+		return repoJTBPH.findByJtbphNo(ptno);
+	}
+	
 	public List<JfTrnBpPtHdrs> getJtbpdByStatus(String Sta){
+		
 		return repoJTBPH.findByJtbphStatus(Sta);
 	}
 	
 	public List<JfTrnBpPtHdrs> getJtbpdBySofCode(String sof){
 		return repoJTBPH.findByJtbphSofCode(sof);
+	}
+	
+	public String SaveUpdJtbph(JfTrnBpPtHdrs jtbph) {
+		repoJTBPH.save(jtbph);
+		return "Submit Successfully";
 	}
 	
 	

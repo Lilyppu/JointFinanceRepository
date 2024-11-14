@@ -21,6 +21,11 @@ public class ControllerJfTrnBpPtHdrs {
 		return servJTBPH.getJtbpdList();
 	}
 	
+	@GetMapping("/jf/getJtbphSingle")
+	public Optional<JfTrnBpPtHdrs> getJtbphSingle(String ptno){
+		return servJTBPH.getJtbpdSingle(ptno);
+	}
+	
 	@GetMapping("/jf/getJtbphByPtNo")
 	public List<JfTrnBpPtHdrs> getJtbpdByPtNo(String ptno){
 		return servJTBPH.getJtbpdByPtNo(ptno);
@@ -34,6 +39,12 @@ public class ControllerJfTrnBpPtHdrs {
 	@GetMapping("/jf/getJtbphBySofCode")
 	public List<JfTrnBpPtHdrs> getJtbpdBySofCode(String sof){
 		return servJTBPH.getJtbpdBySofCode(sof);
+	}
+	
+	@PostMapping("/jf/saveupdJtbph")
+	public String SaveUpdJtbph(@RequestBody JfTrnBpPtHdrs jtbph) {
+		System.out.println("aaaeeeee :"+jtbph.getJtbphNo());
+		return servJTBPH.SaveUpdJtbph(jtbph);
 	}
 	
 
