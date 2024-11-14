@@ -14,7 +14,13 @@ public class ServiceTrMstCounterpartiesAndCpBranch {
 	@Autowired
 	ITrMstCounterpartiesAndCpBranchRepository repoTMCACB;
 	
-	public List<TrMstCounterpartiesAndCpBranch> getTmcacbByCpCode(String pCp){
-		return repoTMCACB.getTmcacbByCpCode(pCp);
+	public List<TrMstCounterpartiesAndCpBranch> getTmcacbList(){
+		return repoTMCACB.findTmcacbList();
 	}
+	
+	public List<TrMstCounterpartiesAndCpBranch> getTmcacbByCpCode(String pCp){
+		return repoTMCACB.findTmcacbByCpCode(pCp);
+	}
+	
+
 }

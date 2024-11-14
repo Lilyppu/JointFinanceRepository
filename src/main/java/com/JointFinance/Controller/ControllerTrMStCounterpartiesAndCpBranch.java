@@ -20,6 +20,11 @@ public class ControllerTrMStCounterpartiesAndCpBranch {
 	@Autowired
 	ServiceTrMstCounterpartiesAndCpBranch servTMCACB;
     
+	@GetMapping("/tr/getTmcacbList")
+	public List<TrMstCounterpartiesAndCpBranch> getTmcacbList(){
+		return servTMCACB.getTmcacbList();
+	}
+	
 	@GetMapping("/tr/getTmcacbByCpCode")
 	public List<TrMstCounterpartiesAndCpBranch> getTmcacbByCpCode(String pCp){
 		return servTMCACB.getTmcacbByCpCode(pCp);

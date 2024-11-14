@@ -37,4 +37,9 @@ public class ControllerTrMstCpRoles {
 		return servTMCR.getTmcrRoleCode(rolecode);
 	}
 	
+	@GetMapping("/tr/getTmcrCpCodeAndTmcrBranchId")
+	public List<TrMstCpRoles> getTmcrCpCodeAndTmcrBranchId(String cpcode, Integer branchid){
+		return servTMCR.getTmcrCpCodeAndTmcrBranchId(cpcode, branchid);
+	}
+	
 }

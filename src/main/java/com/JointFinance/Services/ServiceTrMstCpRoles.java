@@ -29,4 +29,8 @@ public class ServiceTrMstCpRoles {
 	public List<TrMstCpRoles> getTmcrRoleCode(String rolecode){
 		return repoTMCR.findByTmcrRoleCode(rolecode);
 	}
+	
+	public List<TrMstCpRoles> getTmcrCpCodeAndTmcrBranchId(String cpcode, Integer branchid){
+		return repoTMCR.findByTmcrCpCodeAndTmcrBranchId(cpcode, branchid);
+	}
 }

@@ -31,4 +31,10 @@ public class ControllerTrMstCpBranches {
 	public Optional<TrMstCpBranches> getTmcbrBranchId(Integer branchid){
 		return servTMCBR.getTmcbrBranchId(branchid);
 	}
+	
+	@GetMapping("/tr/getTmcbrCpCodeAndTmcbrBranchId")
+	public Optional<TrMstCpBranches> getTmcbrCpCodeAndTmcbrBranchId(String cpcode, Integer branchid){
+		return servTMCBR.getTmcbrCpCodeAndTmcbrBranchId(cpcode, branchid);
+	}
+	
 }

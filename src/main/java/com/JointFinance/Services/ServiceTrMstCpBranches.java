@@ -25,4 +25,9 @@ public class ServiceTrMstCpBranches {
 	public Optional<TrMstCpBranches> getTmcbrBranchId(Integer branchid){
 		return repoTMCBR.findByTmcbrBranchId(branchid);
 	}
+	
+	public Optional<TrMstCpBranches> getTmcbrCpCodeAndTmcbrBranchId(String cpcode, Integer branchid){
+		return repoTMCBR.findByTmcbrCpCodeAndTmcbrBranchId(cpcode, branchid);
+	}
+	
 }
