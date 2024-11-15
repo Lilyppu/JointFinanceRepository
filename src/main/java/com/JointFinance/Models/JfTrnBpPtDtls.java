@@ -67,8 +67,5 @@ public class JfTrnBpPtDtls {
 	
 	@Column(name="KETERANGAN", length=300)
 	private String jtbpdKeterangan;
-	
-	
-	
 
 }

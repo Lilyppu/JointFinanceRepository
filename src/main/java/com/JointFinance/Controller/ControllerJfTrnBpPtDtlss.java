@@ -14,7 +14,7 @@ import com.JointFinance.Services.ServiceJfTrnBpPtDtls;
 
 
 @RestController
-public class JfTrnBpPtDtlss {
+public class ControllerJfTrnBpPtDtlss {
 	@Autowired
 	ServiceJfTrnBpPtDtls servJTBPDtls;
 	
