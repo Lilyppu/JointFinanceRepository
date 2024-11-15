@@ -23,4 +23,14 @@ public class ControllerJfTrnLetters {
 		return servJTL.getJtlList(pLetterType, pCpCode, pSofCode, pGroupCode);
 	}
 	
+	@GetMapping("/jf/runConfirmProcess")
+	public String runConfirmProcess(String pLetterNo, String pLetterType, String pGroupCode, Integer pPerhitBank, Integer pPerhitFif, String pUserId) {
+		return servJTL.runConfirmProcess(pLetterNo, pLetterType, pGroupCode, pPerhitBank, pPerhitFif, pUserId);
+	}
+	
+	@GetMapping("/jf/runResetSof")
+	public String runConfirmProcess(String pLetterNo, String pSofCode, String pUserId) {
+		return servJTL.runResetSof(pLetterNo, pSofCode, pUserId);
+	}
+	
 }

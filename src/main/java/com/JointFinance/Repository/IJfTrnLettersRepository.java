@@ -20,4 +20,13 @@ public interface IJfTrnLettersRepository extends JpaRepository<JfTrnLetters, Str
 			+ " and a.letter_count > 0 and a.perhit_fif > 0 and exists (select 1 from jf_trn_sof_hdrs c"
 			+ " where c.jf_status = 'AC' and c.sof_code = a.sof_code)", nativeQuery = true)
 	List<JfTrnLetters> getJtlList(String pLetterType, String pCpCode, String pSofCode, String pGroupCode);
+	
+	//@Query(value="select JF_BANK_CONFIRM_PKG.PROSES(:pLetterNo, :pLetterType, :pGroupCode, :pPerhitBank, :pPerhitFif, :pUserId) from dual", nativeQuery = true)
+	//public String runProses(String pLetterNo, String pLetterType, String pGroupCode, Integer pPerhitBank, Integer pPerhitFif, String pUserId);
+	
+	@Procedure(procedureName = "JF_BANK_CONFIRM_PKG.RUN_FUNCTION_PROSES")
+	public String runProses(String pLetterNo, String pLetterType, String pGroupCode, Integer pPerhitBank, Integer pPerhitFif, String pUserId);	
+	
+	@Procedure(procedureName = "RUN_FUNTION_JF_F_RESET_SOF")
+	public String runResetSof(String pLetterNo, String pSofCode, String pUserId);	
 }
