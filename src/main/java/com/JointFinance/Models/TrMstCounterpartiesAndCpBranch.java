@@ -42,4 +42,7 @@ public class TrMstCounterpartiesAndCpBranch {
 
     @Column(name = "BRANCH_NAME")
     private String tmcAndCbrBranchName;
+    
+    @Column(name = "ACCOUNT_NO")
+    private String tmcAndCbrAccountNo;
 }

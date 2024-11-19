@@ -31,4 +31,9 @@ public class ControllerTrMstCpersons {
 	public List<TrMstCpersons> getTmcpBranchId(Integer branchid){
 		return servTMCP.getTmcpBranchId(branchid);
 	}
+	
+	@GetMapping("/tr/getTmcpCpCodeAndTmcpBranchId")
+	public List<TrMstCpersons> getTmcpCpCodeAndTmcpBranchId(String cpcode, Integer branchid){
+		return servTMCP.getTmcpCpCodeAndTmcpBranchId(cpcode, branchid);
+	}
 }
