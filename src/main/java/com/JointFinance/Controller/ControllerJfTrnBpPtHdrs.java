@@ -43,7 +43,7 @@ public class ControllerJfTrnBpPtHdrs {
 	
 	@PostMapping("/jf/saveupdJtbph")
 	public String SaveUpdJtbph(@RequestBody JfTrnBpPtHdrs jtbph) {
-		System.out.println("aaaeeeee :"+jtbph.getJtbphNo());
+		//System.out.println("aaaeeeee :"+jtbph.getJtbphNo());
 		return servJTBPH.SaveUpdJtbph(jtbph);
 	}
 	
