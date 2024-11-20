@@ -17,4 +17,8 @@ public class ServiceJfTrnBpPtDtls {
 	public List<JfTrnBpPtDtls> getJtbpdList(String ptno){
 		return repoJTBPDtls.findByJtbpdNo(ptno);
 	}
+	
+	public String runInsertPtDtl(String ptno, String psofcode, String pcontractno, String premark, String puser) {		
+		return repoJTBPDtls.runProses(ptno, psofcode, pcontractno, premark, puser);
+	}
 }

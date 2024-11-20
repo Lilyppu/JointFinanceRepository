@@ -22,4 +22,10 @@ public class ControllerJfTrnBpPtDtlss {
 	public List<JfTrnBpPtDtls> getJtbpdList(String ptno){
 		return servJTBPDtls.getJtbpdList(ptno);
 	}
+	
+	@GetMapping("/jf/getInsertJtbpd")
+	public String runInsertPtDtl(String ptno, String psofcode, String pcontractno, String premark, String puser) {	
+		System.out.println("aaaaa :"+ptno);
+		return servJTBPDtls.runInsertPtDtl(ptno, psofcode, pcontractno, premark, puser);
+	}
 }

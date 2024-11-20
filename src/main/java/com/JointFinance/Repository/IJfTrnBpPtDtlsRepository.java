@@ -16,5 +16,9 @@ import com.JointFinance.Models.JfTrnBpPtDtlsCompKey;
 public interface IJfTrnBpPtDtlsRepository extends JpaRepository<JfTrnBpPtDtls,JfTrnBpPtDtlsCompKey>{
 
 	public List<JfTrnBpPtDtls> findByJtbpdNo(String ptno);
+	
+	@Procedure(procedureName = "P_JF_PRETERMDTL_INSERT")
+	public String runProses(String ptno, String psofcode, String pcontractno, String premark, String puser);	
+	
 
 }
