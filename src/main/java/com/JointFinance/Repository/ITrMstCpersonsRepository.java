@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
 import com.JointFinance.Models.TrMstCpersons;
+
 public interface ITrMstCpersonsRepository extends JpaRepository<TrMstCpersons, String> {
 
 	public Optional<TrMstCpersons> findByTmcpCpCode(String cpcode);

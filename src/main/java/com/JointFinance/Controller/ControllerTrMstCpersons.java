@@ -36,4 +36,9 @@ public class ControllerTrMstCpersons {
 	public List<TrMstCpersons> getTmcpCpCodeAndTmcpBranchId(String cpcode, Integer branchid){
 		return servTMCP.getTmcpCpCodeAndTmcpBranchId(cpcode, branchid);
 	}
+	
+	@PostMapping("/tr/saveupdateTmcp")
+	public String SaveUpdTmcp(@RequestBody TrMstCpersons tmcp){
+		return servTMCP.saveUpdateTmcp(tmcp);
+	}
 }

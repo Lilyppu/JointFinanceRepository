@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.JointFinance.Models.JfMstParameters;
 import com.JointFinance.Models.TrMstCpRoles;
 import com.JointFinance.Services.ServiceTrMstCpRoles;
 
@@ -42,4 +43,13 @@ public class ControllerTrMstCpRoles {
 		return servTMCR.getTmcrCpCodeAndTmcrBranchId(cpcode, branchid);
 	}
 	
+	@GetMapping("/tr/getTmcrCpCodeAndTmcrBranchIdAndTmcrRoleCode")
+	public Optional<TrMstCpRoles> getTmcrCpCodeAndTmcrBranchIdAndTmcrRoleCode(String cpcode, Integer branchid, String rolecode){
+		return servTMCR.getTmcrCpCodeAndTmcrBranchIdAndTmcrRoleCode(cpcode, branchid, rolecode);
+	}
+	
+	@PostMapping("/tr/saveupdateTmcr")
+	public String saveUpdateTmcr(@RequestBody TrMstCpRoles tmcr) {
+		return servTMCR.saveUpdateTmcr(tmcr);
+	}
 }

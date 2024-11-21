@@ -25,4 +25,9 @@ public class ServiceTrMstCpBas {
 	public Optional<TrMstCpBas> getTmcbAccountNo(String accountno){
 		return repoTMCB.findByTmcbAccountNo(accountno);
 	}
+	
+	public String saveUpdateTmcb(TrMstCpBas tmcb) {
+		repoTMCB.save(tmcb);
+		return "Submit Successfully";
+	}
 }

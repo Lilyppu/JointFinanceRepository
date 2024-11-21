@@ -46,4 +46,14 @@ public class ControllerTrMstBaRoles {
 	public List<TrMstBaRoles> getTmbrRoleCode(String rolecode){
 		return servTMBR.getTmbrRoleCode(rolecode);
 	}
+	
+	@GetMapping("/tr/getTmbrAccountNoAndTmbrRoleCode")
+	public Optional<TrMstBaRoles> getTmbrAccountNoAndTmbrRoleCode(String accountno, String rolecode){
+		return servTMBR.getTmbrAccountNoAndTmbrRoleCode(accountno,rolecode);
+	}
+	
+	@PostMapping("/tr/saveupdateTmbr")
+	public String saveUpdateTmbr(@RequestBody TrMstBaRoles tmbr) {
+		return servTMBR.saveUpdateTmbr(tmbr);
+	}
 }

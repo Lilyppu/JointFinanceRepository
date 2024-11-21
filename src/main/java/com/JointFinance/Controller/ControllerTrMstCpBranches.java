@@ -37,4 +37,8 @@ public class ControllerTrMstCpBranches {
 		return servTMCBR.getTmcbrCpCodeAndTmcbrBranchId(cpcode, branchid);
 	}
 	
+	@PostMapping("/tr/saveupdateTmcbr")
+	public String saveUpdateTmcbr(@RequestBody TrMstCpBranches tmcbr) {
+		return servTMCBR.saveUpdateTmcbr(tmcbr);
+	}
 }

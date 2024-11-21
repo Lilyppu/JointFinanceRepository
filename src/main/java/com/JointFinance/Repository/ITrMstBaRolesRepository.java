@@ -18,4 +18,5 @@ public interface ITrMstBaRolesRepository extends JpaRepository<TrMstBaRoles, TrM
     public List<TrMstBaRoles> findByTmbrCpCode(String cpnode);
     public List<TrMstBaRoles> findByTmbrBranchId(Integer branchid);
     public List<TrMstBaRoles> findByTmbrRoleCode(String rolecode);
+    public Optional<TrMstBaRoles> findByTmbrAccountNoAndTmbrRoleCode(String accountno, String rolecode);
 }

@@ -33,4 +33,13 @@ public class ServiceTrMstCpRoles {
 	public List<TrMstCpRoles> getTmcrCpCodeAndTmcrBranchId(String cpcode, Integer branchid){
 		return repoTMCR.findByTmcrCpCodeAndTmcrBranchId(cpcode, branchid);
 	}
+	
+	public Optional<TrMstCpRoles> getTmcrCpCodeAndTmcrBranchIdAndTmcrRoleCode(String cpcode, Integer branchid, String rolecode){
+		return repoTMCR.findByTmcrCpCodeAndTmcrBranchIdAndTmcrRoleCode(cpcode, branchid, rolecode);
+	}
+	
+	public String saveUpdateTmcr(TrMstCpRoles tmcr) {
+		repoTMCR.save(tmcr);
+		return "Submit Successfully";
+	}
 }

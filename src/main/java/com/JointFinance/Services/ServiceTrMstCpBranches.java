@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.JointFinance.Models.TrMstCpBranches;
+import com.JointFinance.Models.TrMstCpRoles;
 import com.JointFinance.Repository.ITrMstCpBranchesRepository;
 
 @Service
@@ -30,4 +31,8 @@ public class ServiceTrMstCpBranches {
 		return repoTMCBR.findByTmcbrCpCodeAndTmcbrBranchId(cpcode, branchid);
 	}
 	
+	public String saveUpdateTmcbr(TrMstCpBranches tmcbr) {
+		repoTMCBR.save(tmcbr);
+		return "Submit Successfully";
+	}
 }
