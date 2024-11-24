@@ -23,6 +23,6 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 				+ "       AND NOT EXISTS (SELECT 1 FROM JF_TRN_SOF_SUMMARIES jtss2\r\n"
 				+ "                        WHERE APPROVE_STATUS = 'AP'\r\n"
 				+ "                          AND jtss2.SOF_CODE = jtss.SOF_CODE\r\n"
-				+ "                          AND TRUNC (SOF_DATE) = ?1)", nativeQuery = true)
-	public List<JfTrnSofSummaries> getListJfTrnSofSummariesBySofDate(Date sofDate);
+				+ "                          AND TRUNC (SOF_DATE) = ?2)", nativeQuery = true)
+	public List<JfTrnSofSummaries> getListJfTrnSofSummariesBySofDate(Date sofDate, Date sofDate1);
 }

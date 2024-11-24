@@ -19,6 +19,6 @@ public class ServiceJfTrnSofSummaries {
 	}
 	
 	public List<JfTrnSofSummaries> getListJfTrnSofSummariesBySofDate(Date sofDate) {
-		return repoSofSummaries.getListJfTrnSofSummariesBySofDate(sofDate);
+		return repoSofSummaries.getListJfTrnSofSummariesBySofDate(sofDate, sofDate);
 	}
 }
