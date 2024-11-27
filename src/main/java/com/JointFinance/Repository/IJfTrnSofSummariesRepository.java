@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
 import com.JointFinance.Models.JfTrnSofSummaries;
@@ -25,4 +26,12 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 				+ "                          AND jtss2.SOF_CODE = jtss.SOF_CODE\r\n"
 				+ "                          AND TRUNC (SOF_DATE) = ?2)", nativeQuery = true)
 	public List<JfTrnSofSummaries> getListJfTrnSofSummariesBySofDate(Date sofDate, Date sofDate1);
+	
+	public List<JfTrnSofSummaries> getListJfTrnSofSummariesBySofDateStatus(Date jtssSofDate, String jtssApproveStatus);
+	
+	@Procedure(procedureName = "P_GENJF")
+	public String procGenJF(String p_userid, Date p_simdate);
+	
+	@Procedure(procedureName = "P_SIMJF")
+	public String procSimJF(String p_userid, Date p_simdate);
 }
