@@ -17,5 +17,6 @@ public interface ITrMstCpRolesRepository extends JpaRepository<TrMstCpRoles, TrM
     public List<TrMstCpRoles> findByTmcrBranchId(Integer branchid);
     public List<TrMstCpRoles> findByTmcrRoleCode(String rolecode);
     public List<TrMstCpRoles> findByTmcrCpCodeAndTmcrBranchId(String cpcode, Integer branchid);
+    public Optional<TrMstCpRoles> findByTmcrCpCodeAndTmcrBranchIdAndTmcrRoleCode(String cpcode, Integer branchid, String rolecode);
  
 }

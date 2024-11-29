@@ -29,4 +29,9 @@ public class ServiceTrMstCpersons {
 	public List<TrMstCpersons> getTmcpCpCodeAndTmcpBranchId(String cpcode, Integer branchid){
 		return repoTMCP.findByTmcpCpCodeAndTmcpBranchId(cpcode, branchid);
 	}
+	
+	public String saveUpdateTmcp(TrMstCpersons tmcp){
+		repoTMCP.save(tmcp);
+		 return "Submit Successfully";
+	}
 }

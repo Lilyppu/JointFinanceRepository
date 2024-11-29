@@ -45,6 +45,11 @@ public class ControllerTrMstCpBas {
     }
 	*/
 	
+	@PostMapping("/tr/saveupdateTmcb")
+	public String saveUpdateTmcb(@RequestBody TrMstCpBas tmcb) {
+		return servTMCB.saveUpdateTmcb(tmcb);
+	}
+	
 	@GetMapping("/tr/test")
 	public ResponseEntity<String> test() {
 	    return ResponseEntity.ok("Endpoint is working!");

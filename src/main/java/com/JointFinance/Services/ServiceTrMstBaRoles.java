@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.JointFinance.Models.TrMstBaRoles;
+import com.JointFinance.Models.TrMstCpRoles;
 import com.JointFinance.Repository.ITrMstBaRolesRepository;
 
 @Service
@@ -36,5 +37,14 @@ public class ServiceTrMstBaRoles {
 	
 	public List<TrMstBaRoles> getTmbrRoleCode(String rolecode){
 		return repoTMBR.findByTmbrRoleCode(rolecode);
+	}
+	
+	public Optional<TrMstBaRoles> getTmbrAccountNoAndTmbrRoleCode(String accountno, String rolecode){
+		return repoTMBR.findByTmbrAccountNoAndTmbrRoleCode(accountno,rolecode);
+	}
+	
+	public String saveUpdateTmbr(TrMstBaRoles tmbr) {
+		repoTMBR.save(tmbr);
+		return "Submit Successfully";
 	}
 }

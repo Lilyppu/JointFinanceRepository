@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.JointFinance.Models.JfTrnSofParameters;
 import com.JointFinance.Models.TrMstCounterparties;
 import com.JointFinance.Services.ServiceTrMstCounterparties;
 
@@ -31,6 +32,11 @@ public class ControllerTrMstCounterParties {
 	@GetMapping("/tr/getTmcCpCodeList")
 	public List<TrMstCounterparties> getTmcCpCodeList(String cpcode){
 		return servTMC.getTmcCpCodeList(cpcode);
+	}
+	
+	@PostMapping("/tr/saveupdateTmc")
+	public String saveUpdateTmc(@RequestBody TrMstCounterparties tmc){
+		return servTMC.saveUpdateTmc(tmc);
 	}
 	
 }

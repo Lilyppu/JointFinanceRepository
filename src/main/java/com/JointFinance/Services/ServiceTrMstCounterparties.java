@@ -26,4 +26,8 @@ public class ServiceTrMstCounterparties {
 		return repoTMC.findByTmcCpCodeContaining(cpcode);
 	}
 	
+	public String saveUpdateTmc(TrMstCounterparties tmc){
+		repoTMC.save(tmc);
+		 return "Submit Successfully";
+	}
 }
