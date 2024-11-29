@@ -25,4 +25,8 @@ public class ServiceTrMstCpersons {
 	public List<TrMstCpersons> getTmcpBranchId(Integer branchid){
 		return repoTMCP.findByTmcpBranchId(branchid);
 	}
+	
+	public List<TrMstCpersons> getTmcpCpCodeAndTmcpBranchId(String cpcode, Integer branchid){
+		return repoTMCP.findByTmcpCpCodeAndTmcpBranchId(cpcode, branchid);
+	}
 }

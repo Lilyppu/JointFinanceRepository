@@ -15,4 +15,6 @@ public interface ITrMstCpersonsRepository extends JpaRepository<TrMstCpersons, S
 	public Optional<TrMstCpersons> findByTmcpCpCode(String cpcode);
 	
 	public List<TrMstCpersons> findByTmcpBranchId(Integer branchid);
+	
+	public List<TrMstCpersons> findByTmcpCpCodeAndTmcpBranchId(String cpcode, Integer branchid);
 }

@@ -29,4 +29,9 @@ public class ControllerTrMStCounterpartiesAndCpBranch {
 	public List<TrMstCounterpartiesAndCpBranch> getTmcacbByCpCode(String pCp){
 		return servTMCACB.getTmcacbByCpCode(pCp);
 	}
+	
+	@GetMapping("/tr/getTmcacbByCpCodeAndBranchId")
+	public Optional<TrMstCounterpartiesAndCpBranch> getTmcacbByCpCodeAndBranchId(String pCp, Integer pBi){
+		return servTMCACB.getTmcacbByCpCodeAndBranchId(pCp, pBi);
+	}
 }

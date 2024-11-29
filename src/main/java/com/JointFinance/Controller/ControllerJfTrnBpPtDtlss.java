@@ -1,5 +1,6 @@
 package com.JointFinance.Controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,8 +25,8 @@ public class ControllerJfTrnBpPtDtlss {
 	}
 	
 	@GetMapping("/jf/getInsertJtbpd")
-	public String runInsertPtDtl(String ptno, String psofcode, String pcontractno, String premark, String puser) {	
-		System.out.println("aaaaa :"+ptno);
-		return servJTBPDtls.runInsertPtDtl(ptno, psofcode, pcontractno, premark, puser);
+	public String runInsertPtDtl(String ptno, String psofcode, String pcontractno, String premark, String puser, BigDecimal pdayintr, BigDecimal padmin) {	
+	
+		return servJTBPDtls.runInsertPtDtl(ptno, psofcode, pcontractno, premark, puser,  pdayintr, padmin);
 	}
 }

@@ -22,5 +22,7 @@ public class ServiceTrMstCounterpartiesAndCpBranch {
 		return repoTMCACB.findTmcacbByCpCode(pCp);
 	}
 	
-
+	public Optional<TrMstCounterpartiesAndCpBranch> getTmcacbByCpCodeAndBranchId(String pCp, Integer pBi){
+		return repoTMCACB.findTmcacbByCpCodeAndBranchId(pCp, pBi);
+	}
 }
