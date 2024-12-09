@@ -26,7 +26,7 @@ public class VJfJobType {
 	@Column(name="JOBTYPE",length=30,nullable = false)
 	private String vjjtType;
 	
-	@Column(name="JOBDECS",length=30)
+	@Column(name="JOBDESC",length=30)
 	private String vjjtDesc;
 
 }

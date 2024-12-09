@@ -10,7 +10,7 @@ import com.JointFinance.Models.VJfJobType;
 import com.JointFinance.Repository.IVJfJobTypeRepository;
 @Service
 public class ServiceVJfJobType {
-
+    @Autowired
 	IVJfJobTypeRepository repoVjjt;
 	
 	public List<VJfJobType> getJobTypeList(){

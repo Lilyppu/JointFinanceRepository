@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.JointFinance.Models.VJfJobType;
 
+@Repository
 public interface IVJfJobTypeRepository extends JpaRepository<VJfJobType, String>{
 
 }
