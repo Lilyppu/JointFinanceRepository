@@ -24,4 +24,15 @@ public class ControllerVJfJobType {
 	public List<VJfJobType> getJobTypeList(){
 		return servVjjt.getJobTypeList();
 	}
+	
+	@GetMapping("/jf/rerunprocess")
+	public String RunReProcess (String p_name, String p_status, String puserid) {
+		return servVjjt.RunReProcess(p_name, p_status, puserid);
+	}
+	
+	@GetMapping("/jf/runsendemail")
+	public String runSendEmail(String p_name,  String pto, String psubject, String pnote,  String puserid) {
+		System.out.println("aaaaa :"+p_name+"-"+pto+"-"+psubject+"-"+pnote);
+		return servVjjt.runSendEmail(p_name, pto, psubject, pnote, puserid);
+	}
 }
