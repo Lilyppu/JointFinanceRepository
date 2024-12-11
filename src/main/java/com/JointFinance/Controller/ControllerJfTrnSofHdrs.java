@@ -53,9 +53,19 @@ public class ControllerJfTrnSofHdrs {
 		return servJTSH.getLovSoft(cpcode);
 	}
 	
+	@GetMapping("/jf/runApproveJtsh")
+	public String runApproveJtsh(String psof,  String puserid) {
+		return servJTSH.runApproveJtsh(psof, puserid);
+	}
+	
 	@PostMapping("/jf/saveupdateSofHdr")
 	public String saveUpdateTrSofHdrs(@RequestBody JfTrnSofHdrs sofhdr) {
 		return servJTSH.saveUpdateTrSofHdrs(sofhdr);
+	}
+	
+	@GetMapping("/jf/getAppSofHdr")
+	public List<JfTrnSofHdrs> getAppSofHdrList(){
+		return servJTSH.getAppSofHdrList();
 	}
 	
 

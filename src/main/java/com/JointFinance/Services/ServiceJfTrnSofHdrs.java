@@ -42,9 +42,17 @@ public class ServiceJfTrnSofHdrs {
 		return repoJTSH.getLovSoft(cpcode);
 	}
 	
+	public String runApproveJtsh(String psof,  String puserid) {
+		return repoJTSH.runApproveJtsh(psof, puserid);
+	}
+	
 	public String saveUpdateTrSofHdrs(JfTrnSofHdrs sofhdr) {
 		repoJTSH.save(sofhdr);
 		return "Submit Successfully";
+	}
+	
+	public List<JfTrnSofHdrs> getAppSofHdrList(){
+		return repoJTSH.getAppSofHdrList();
 	}
 
 }
