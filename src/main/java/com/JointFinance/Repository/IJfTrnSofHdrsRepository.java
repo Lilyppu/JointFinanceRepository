@@ -15,6 +15,7 @@ public interface IJfTrnSofHdrsRepository extends JpaRepository<JfTrnSofHdrs, Str
       
 	public Optional<JfTrnSofHdrs> findByJtshSofCode (String code);
 	
+	
 	public List<JfTrnSofHdrs> findByJtshSofCodeContaining (String code);
 	
 	public List<JfTrnSofHdrs> findByJtshAliasContaining (String alias);
