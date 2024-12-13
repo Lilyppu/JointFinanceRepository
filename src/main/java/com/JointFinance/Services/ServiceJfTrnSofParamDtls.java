@@ -25,7 +25,7 @@ public class ServiceJfTrnSofParamDtls {
 	}
 	
 	public Optional<JfTrnSofParamDtls> getJtspdSingle(String sof, Integer ver, Integer seq, String off){
-		return repoJTSPD.findByJtspdSofCodeAndJtspdVerAndJtspdSeqNoAndJtspdOfficeCode(sof, seq, seq, off);
+		return repoJTSPD.findByJtspdSofCodeAndJtspdVerAndJtspdSeqNoAndJtspdOfficeCode(sof, ver, seq, off);
 	}
 	
 	public String SaveUpdJtspd(JfTrnSofParamDtls jtdpd) {

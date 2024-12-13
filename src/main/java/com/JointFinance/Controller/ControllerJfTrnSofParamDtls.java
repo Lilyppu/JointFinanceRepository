@@ -30,11 +30,12 @@ public class ControllerJfTrnSofParamDtls {
 	
 	@GetMapping("/jf/getJtspdSingle")
 	public Optional<JfTrnSofParamDtls> getJtspdSingle(String sof, Integer ver, Integer seq, String off){
+		System.out.println("aaaaa :"+sof+"-"+ver+"-"+seq+"-"+off);
 		return servJTSPD.getJtspdSingle(sof, seq, seq, off);
 	}
 	
 	@PostMapping("/jf/saveupdateJtspd")
-	public String SaveUpdJtspd(JfTrnSofParamDtls jtdpd) {		
+	public String SaveUpdJtspd(@RequestBody JfTrnSofParamDtls jtdpd) {		
 		return servJTSPD.SaveUpdJtspd(jtdpd);
 	}
 
