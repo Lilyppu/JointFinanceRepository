@@ -1,5 +1,6 @@
 package com.JointFinance.Services;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,5 +17,9 @@ public class ServiceJfTrnBpPtDtls {
 	
 	public List<JfTrnBpPtDtls> getJtbpdList(String ptno){
 		return repoJTBPDtls.findByJtbpdNo(ptno);
+	}
+	
+	public String runInsertPtDtl(String ptno, String psofcode, String pcontractno, String premark, String puser, BigDecimal pdayintr, BigDecimal padmin) {		
+		return repoJTBPDtls.runProses(ptno, psofcode, pcontractno, premark, puser, pdayintr, padmin);
 	}
 }

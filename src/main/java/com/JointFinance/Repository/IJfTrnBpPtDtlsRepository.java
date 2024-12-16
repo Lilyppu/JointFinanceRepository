@@ -1,4 +1,5 @@
 package com.JointFinance.Repository;
+import java.math.BigDecimal;
 import java.util.List;
 
 import java.util.Optional;
@@ -16,5 +17,9 @@ import com.JointFinance.Models.JfTrnBpPtDtlsCompKey;
 public interface IJfTrnBpPtDtlsRepository extends JpaRepository<JfTrnBpPtDtls,JfTrnBpPtDtlsCompKey>{
 
 	public List<JfTrnBpPtDtls> findByJtbpdNo(String ptno);
+	
+	@Procedure(procedureName = "P_JF_PRETERMDTL_INSERT")
+	public String runProses(String ptno, String psofcode, String pcontractno, String premark, String puser,  BigDecimal pdayintr, BigDecimal padmin );	
+	
 
 }

@@ -40,6 +40,19 @@ public class ServiceJfTrnBpPtHdrs {
 		repoJTBPH.save(jtbph);
 		return "Submit Successfully";
 	}
+
+	public String runProcessApprove(String pdate , String ptno , String ptstatus, String puserid ) {
+		return repoJTBPH.runProcessApprove(pdate, ptno, ptstatus, puserid);
+	}
+	
+	public String runProcessCancel(String pdate , String ptno , String ptstatus, String puserid ) {
+		return repoJTBPH.runProcessCancel(pdate, ptno, ptstatus, puserid);
+	}
+	
+	public String runProcessProcess(String pdate , String ptno , String ptstatus, String puserid ) {
+		return repoJTBPH.runProcessProcess(pdate, ptno, ptstatus, puserid);
+	}
+	
 	
 	
 }

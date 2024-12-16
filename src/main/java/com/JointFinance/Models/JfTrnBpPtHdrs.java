@@ -43,6 +43,7 @@ public class JfTrnBpPtHdrs {
 	private String jtbphApproveBy;
 	
 	@Column(name="APPROVED_DATE")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date jtbphApproveDate;
 	
 	@Column(name="PRETERM_TYPE", length=2)

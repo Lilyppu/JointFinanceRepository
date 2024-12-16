@@ -43,8 +43,22 @@ public class ControllerJfTrnBpPtHdrs {
 	
 	@PostMapping("/jf/saveupdJtbph")
 	public String SaveUpdJtbph(@RequestBody JfTrnBpPtHdrs jtbph) {
-		//System.out.println("aaaeeeee :"+jtbph.getJtbphNo());
 		return servJTBPH.SaveUpdJtbph(jtbph);
+	}
+	
+	@GetMapping("/jf/runPtApprove")
+	public String runProcessApprove(String pdate , String ptno , String ptstatus, String puserid ) {
+		return servJTBPH.runProcessApprove(pdate, ptno, ptstatus, puserid);
+	}
+	
+	@GetMapping("/jf/runPtCancel")
+	public String runProcessCancel(String pdate , String ptno , String ptstatus, String puserid ) {
+		return servJTBPH.runProcessCancel(pdate, ptno, ptstatus, puserid);
+	}
+	
+	@GetMapping("/jf/runPtProcess")
+	public String runProcessProcess(String pdate , String ptno , String ptstatus, String puserid ) {
+		return servJTBPH.runProcessProcess(pdate, ptno, ptstatus, puserid);
 	}
 	
 
