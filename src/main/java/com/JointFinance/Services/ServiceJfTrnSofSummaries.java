@@ -18,12 +18,12 @@ public class ServiceJfTrnSofSummaries {
 		return repoSofSummaries.findAll();
 	}
 	
-	public List<JfTrnSofSummaries> getListJfTrnSofSummariesBySofDate(Date sofDate) {
-		return repoSofSummaries.getListJfTrnSofSummariesBySofDate(sofDate, sofDate);
+	public List<JfTrnSofSummaries> findBySofDate(Date sofDate) {
+		return repoSofSummaries.findBySofDate(sofDate, sofDate);
 	}
 	
-	public List<JfTrnSofSummaries> getListJfTrnSofSummariesBySofDateStatus(Date jtssSofDate, String jtssApproveStatus) {
-		return repoSofSummaries.getListJfTrnSofSummariesBySofDateStatus(jtssSofDate, jtssApproveStatus);
+	public List<JfTrnSofSummaries> findByJtssSofDateAndJtssApproveStatus(Date jtssSofDate, String jtssApproveStatus) {
+		return repoSofSummaries.findByJtssSofDateAndJtssApproveStatus(jtssSofDate, jtssApproveStatus);
 	}
 	
 	public String procGenJF(String p_userid, Date p_simdate) {

@@ -15,14 +15,14 @@ public class ControllerJfTrnSofSummaries {
 	@Autowired
 	ServiceJfTrnSofSummaries serviceSofSummaries;
 	
-	@GetMapping("/jf/getDisburseSimulation")
-	public List<JfTrnSofSummaries> getListJfTrnSofSummariesBySofDate(Date sofDate) {
-		return serviceSofSummaries.getListJfTrnSofSummariesBySofDate(sofDate);
+	@GetMapping("/jf/getListDisburseSimulation")
+	public List<JfTrnSofSummaries> findBySofDate(Date sofDate) {
+		return serviceSofSummaries.findBySofDate(sofDate);
 	}
 	
-	@GetMapping("/jf/getAprvDisbSimulation")
-	public List<JfTrnSofSummaries> getListJfTrnSofSummariesBySofDateStatus(Date jtssSofDate, String jtssApproveStatus) {
-		return serviceSofSummaries.getListJfTrnSofSummariesBySofDateStatus(jtssSofDate, jtssApproveStatus);
+	@GetMapping("/jf/getListAprvDisburseSimulation")
+	public List<JfTrnSofSummaries> findByJtssSofDateAndJtssApproveStatus(Date jtssSofDate, String jtssApproveStatus) {
+		return serviceSofSummaries.findByJtssSofDateAndJtssApproveStatus(jtssSofDate, jtssApproveStatus);
 	}
 	
 	@GetMapping(path = "/jf/ProcGenJf")

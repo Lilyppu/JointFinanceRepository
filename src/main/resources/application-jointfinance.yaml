@@ -7,9 +7,9 @@ spring:
     username: treasury
     password: devtreasury
   jpa:    
-    generate-ddl: true
+    generate-ddl: false
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true    
   sql:
     init:
