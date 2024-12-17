@@ -26,6 +26,7 @@ public class JfTmpSofIntrRates {
     @Column(name = "SOF_CODE", length = 10)
     private String jtmsirSofCode;
 
+	@Id
     @Column(name = "SEQ_NO")
     private Integer jtmsirSeqNo;
 
