@@ -33,4 +33,8 @@ public class ServiceJfTrnSofSummaries {
 	public String procSimJF(String p_userid, Date p_simdate) {
 		return repoSofSummaries.procSimJF(p_userid, p_simdate);
 	}
+	
+	public String procAprvJF(String p_userid, Date p_simdate) {
+		return repoSofSummaries.procAprvJF(p_userid, p_simdate);
+	}
 }

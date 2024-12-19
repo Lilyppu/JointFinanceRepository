@@ -3,6 +3,8 @@ package com.JointFinance.Models;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -30,6 +32,7 @@ public class JfTrnSofSummaries {
 	
 	@Id
 	@Column(name="SOF_DATE", nullable = false)
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date jtssSofDate;
 	
 	@Column(name="PRNC_AMT")

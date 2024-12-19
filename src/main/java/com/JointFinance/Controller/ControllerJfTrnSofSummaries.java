@@ -34,4 +34,9 @@ public class ControllerJfTrnSofSummaries {
     public String procSimJF(String p_userid, Date p_simdate) {
 		return serviceSofSummaries.procSimJF(p_userid, p_simdate);
 	}
+	
+	@GetMapping(path = "/jf/ProcAprvJf")
+    public String procAprvJF(String p_userid, Date p_simdate) {
+		return serviceSofSummaries.procAprvJF(p_userid, p_simdate);
+	}
 }
