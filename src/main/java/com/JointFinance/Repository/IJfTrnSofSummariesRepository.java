@@ -27,7 +27,7 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 				+ "                          AND TRUNC (SOF_DATE) = ?2)", nativeQuery = true)
 	public List<JfTrnSofSummaries> findBySofDate(Date sofDate, Date sofDate1);
 	
-	public List<JfTrnSofSummaries> findByJtssSofDateAndJtssApproveStatus(Date jtssSofDate, String jtssApproveStatus);
+	public List<JfTrnSofSummaries> findByJtssSofDateAndJtssApproveStatus(Date sofDate, String approveStatus);
 	
 	@Procedure(procedureName = "P_GENJF")
 	public String procGenJF(String p_userid, Date p_simdate);

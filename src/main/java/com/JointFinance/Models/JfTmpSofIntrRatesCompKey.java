@@ -16,6 +16,10 @@ import java.math.BigDecimal;
 @Data
 public class JfTmpSofIntrRatesCompKey implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2078981914552596454L;
 	private String jtmsirSofCode;	
 	private Integer jtmsirSeqNo;
 }

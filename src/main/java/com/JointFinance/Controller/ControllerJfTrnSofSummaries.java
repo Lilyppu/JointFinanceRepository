@@ -21,8 +21,8 @@ public class ControllerJfTrnSofSummaries {
 	}
 	
 	@GetMapping("/jf/getListAprvDisburseSimulation")
-	public List<JfTrnSofSummaries> findByJtssSofDateAndJtssApproveStatus(Date jtssSofDate, String jtssApproveStatus) {
-		return serviceSofSummaries.findByJtssSofDateAndJtssApproveStatus(jtssSofDate, jtssApproveStatus);
+	public List<JfTrnSofSummaries> findByJtssSofDateAndJtssApproveStatus(Date sofDate, String approveStatus) {
+		return serviceSofSummaries.findByJtssSofDateAndJtssApproveStatus(sofDate, approveStatus);
 	}
 	
 	@GetMapping(path = "/jf/ProcGenJf")

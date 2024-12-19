@@ -22,8 +22,8 @@ public class ServiceJfTrnSofSummaries {
 		return repoSofSummaries.findBySofDate(sofDate, sofDate);
 	}
 	
-	public List<JfTrnSofSummaries> findByJtssSofDateAndJtssApproveStatus(Date jtssSofDate, String jtssApproveStatus) {
-		return repoSofSummaries.findByJtssSofDateAndJtssApproveStatus(jtssSofDate, jtssApproveStatus);
+	public List<JfTrnSofSummaries> findByJtssSofDateAndJtssApproveStatus(Date sofDate, String approveStatus) {
+		return repoSofSummaries.findByJtssSofDateAndJtssApproveStatus(sofDate, approveStatus);
 	}
 	
 	public String procGenJF(String p_userid, Date p_simdate) {
