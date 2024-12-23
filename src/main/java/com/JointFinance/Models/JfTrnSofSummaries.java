@@ -1,5 +1,6 @@
 package com.JointFinance.Models;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -21,7 +22,12 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "JF_TRN_SOF_SUMMARIES")
 @IdClass(JfTrnSofSummariesCompKey.class)
-public class JfTrnSofSummaries {
+public class JfTrnSofSummaries implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(name="SOF_CODE", length=10, nullable = false)
 	private String jtssSofCode;
