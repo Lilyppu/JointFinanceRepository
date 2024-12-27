@@ -10,5 +10,5 @@ import com.JointFinance.Models.JfTrnSofDailyTargetsCompKey;
 
 @Repository
 public interface IJfTrnSofDailyTargetsRepository extends JpaRepository<JfTrnSofDailyTargets, JfTrnSofDailyTargetsCompKey> {
-	public List<JfTrnSofDailyTargets> findBySofCode(String sofCode);
+	public List<JfTrnSofDailyTargets> findByJtsdtSofCode(String jtsdtSofCode);
 }

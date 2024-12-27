@@ -15,7 +15,7 @@ public class ControllerJfTrnSofDailyTargets {
 	ServiceJfTrnSofDailyTargets serviceSofDailyTargets;
 	
 	@GetMapping("/jf/getListSofDailyTargets")
-	public List<JfTrnSofDailyTargets> findBySofCode(String sofCode) {
-		return serviceSofDailyTargets.findBySofCode(sofCode);
+	public List<JfTrnSofDailyTargets> findBySofCode(String jtsdtSofCode) {
+		return serviceSofDailyTargets.findBySofCode(jtsdtSofCode);
 	}
 }

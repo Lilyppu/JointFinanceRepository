@@ -13,7 +13,7 @@ public class ServiceJfTrnSofMonthlyTargets {
 	@Autowired
 	IJfTrnSofMonthlyTargetsRepository repoSofMonthlyTargets;
 	
-	public List<JfTrnSofMonthlyTargets> findBySofCode(String sofCode) {
-		return repoSofMonthlyTargets.findBySofCode(sofCode);
+	public List<JfTrnSofMonthlyTargets> findBySofCode(String jtsmtSofCode) {
+		return repoSofMonthlyTargets.findByJtsmtSofCode(jtsmtSofCode);
 	}
 }

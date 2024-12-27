@@ -13,7 +13,7 @@ public class ServiceJfTrnSofDailyTargets {
 	@Autowired
 	IJfTrnSofDailyTargetsRepository repoSofDailyTargets;
 	
-	public List<JfTrnSofDailyTargets> findBySofCode(String sofCode) {
-		return repoSofDailyTargets.findBySofCode(sofCode);
+	public List<JfTrnSofDailyTargets> findBySofCode(String jtsdtSofCode) {
+		return repoSofDailyTargets.findByJtsdtSofCode(jtsdtSofCode);
 	}
 }

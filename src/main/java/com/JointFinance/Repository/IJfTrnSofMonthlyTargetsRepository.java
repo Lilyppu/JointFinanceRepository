@@ -10,5 +10,5 @@ import com.JointFinance.Models.JfTrnSofMonthlyTargetsCompKey;
 
 @Repository
 public interface IJfTrnSofMonthlyTargetsRepository extends JpaRepository<JfTrnSofMonthlyTargets, JfTrnSofMonthlyTargetsCompKey> {
-	public List<JfTrnSofMonthlyTargets> findBySofCode(String sofCode);
+	public List<JfTrnSofMonthlyTargets> findByJtsmtSofCode(String jtsmtSofCode);
 }
