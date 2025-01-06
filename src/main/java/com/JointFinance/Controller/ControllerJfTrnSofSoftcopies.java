@@ -43,4 +43,10 @@ public class ControllerJfTrnSofSoftcopies {
 		servJTSS.getDelJtss(sofcode,softcopyseqno);
 		return "Delete Successfully";
 	}
+	/*
+	@GetMapping("/jf/getDescriptionJtss")
+	public String getDescriptionJtss(String softcopycode) {
+		return servJTSS.getDescriptionJtss(softcopycode);
+	}
+	*/
 }

@@ -23,4 +23,22 @@ public interface IJfTrnSofSoftcopiesRepository extends JpaRepository<JfTrnSofSof
 	@Modifying
 	@Query(value = "DELETE FROM JF_TRN_SOF_SOFTCOPIES a WHERE a.SOF_CODE = ?1 AND a.SOFTCOPY_SEQ_NO = ?2",nativeQuery = true)
     int getDelJtss(String sofcode, Integer softcopyseqno);
+	
+	@Query(value="SELECT A.SOF_CODE, A.SEQ_NO, A.SOFTCOPY_SEQ_NO, A.SOFTCOPY_TYPE, A.SOFTCOPY_CODE, A.STATUS_FLAG, A.LETTER_TYPE, A.CREATED_BY, A.CREATED_TIMESTAMP, A.LASTUPDATE_BY, A.LASTUPDATE_TIMESTAMP, B.DESCRIPTION\r\n"
+			+ "FROM JF_TRN_SOF_SOFTCOPIES A, JF_MST_SOFTCOPIES B\r\n"
+			+ "WHERE A.SOFTCOPY_CODE = B.SOFTCOPY_CODE", nativeQuery = true )
+    List<JfTrnSofSoftcopies> getJtssAll();
+	
+	/*
+	@Transactional
+	@Modifying
+	@Query(value = "SELECT DESCRIPTION"
+			+ "FROM JF_MST_SOFTCOPIES"
+			+ "WHERE SOFTCOPY_CODE = ?1",nativeQuery = true)
+    int getDescriptionJtss(String softcopycode);
+    */
+	
+	@Procedure(procedureName = "GET_DESCRIPTION_JTSS")
+	public String getDescriptionJtss(String softcopycode);	
+	
 }

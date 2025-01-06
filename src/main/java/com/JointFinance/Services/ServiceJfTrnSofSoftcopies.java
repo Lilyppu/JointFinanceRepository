@@ -14,7 +14,7 @@ public class ServiceJfTrnSofSoftcopies {
 	IJfTrnSofSoftcopiesRepository repoJTSS;
 	
 	public List<JfTrnSofSoftcopies> getJtssAll(){
-		return repoJTSS.findAll();
+		return repoJTSS.getJtssAll();
 	}
 	
 	public List<JfTrnSofSoftcopies> getByJtssSofCodeList(String sofcode){
@@ -33,5 +33,9 @@ public class ServiceJfTrnSofSoftcopies {
 	public String getDelJtss(String sofcode,Integer softcopyseqno) {
 		repoJTSS.getDelJtss(sofcode,softcopyseqno);
 		return "Delete Successfully";
+	}
+	
+	public String getDescriptionJtss(String softcopycode) {
+		return repoJTSS.getDescriptionJtss(softcopycode);
 	}
 }
