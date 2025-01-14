@@ -47,4 +47,6 @@ public class JfTrnSofDisbursements {
     
     @Column(name = "LASTUPDATE_TIMESTAMP")
     private Date jtsdsLastupdateTimestamp;
+    
+    //private String jtsdsSofCodeDesc;
 }

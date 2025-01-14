@@ -4,12 +4,16 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
 
 import com.JointFinance.Models.JfTrnSofDisbursements;
+import com.JointFinance.Models.JfTrnSofSoftcopies;
 import com.JointFinance.Services.ServiceJfTrnSofDisbursements;
 
 @RestController
@@ -22,6 +26,20 @@ public class ControllerJfTrnSofDisbursement {
 	public List<JfTrnSofDisbursements> getJtsdsAll(){
 		return servJTSDS.getJtsdsAll();
 	}
+	/*
+	@GetMapping("/jf/getJtsdsAllCstm")
+	public List<JfTrnSofDisbursements> getJtsdsAllCstm(){
+		return servJTSDS.getJtsdsAllCstm();
+	}
+	*/
+	
+	/*
+	@GetMapping("/jf/getJtsdsAllCstm")
+	public ResponseEntity<List<JfTrnSofDisbursements>> getAllSoftCopies() {
+	        List<JfTrnSofDisbursements> softCopies = servJTSDS.getAllWithDescription();
+	        return ResponseEntity.ok(softCopies);
+	}
+	*/
 	
 	@GetMapping("/jf/getByJtsdsSofCodeList")
 	public List<JfTrnSofDisbursements> getByJtsdsSofCodeList(String sofcode){
@@ -43,6 +61,21 @@ public class ControllerJfTrnSofDisbursement {
 		servJTSDS.getDelJtsds(sofcode,seqno);
 		return "Delete Successfully";
 	}
+	
+	/*
+	@GetMapping("/jf/getSofDesc")
+    public String getSofDescription(@RequestParam String sofCode) {
+        return servJTSDS.getSofDescription(sofCode);
+    }
+	*/
+	
+	/*
+	@GetMapping(path = "/jf/getSofDesc")
+    public String getSofDesc(String sofcode,String sofcodedesc) {
+		return servJTSDS.getSofDesc(sofcode,sofcodedesc);
+	}
+	*/
+	
 	/*
 	@GetMapping("/jf/getDescriptionJtss")
 	public String getDescriptionJtss(String softcopycode) {

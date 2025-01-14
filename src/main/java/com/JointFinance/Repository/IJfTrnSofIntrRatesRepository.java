@@ -1,6 +1,7 @@
 package com.JointFinance.Repository;
 
 
+import java.util.Date;
 import java.util.List;
 
 import java.util.Optional;
@@ -18,4 +19,5 @@ public interface IJfTrnSofIntrRatesRepository extends JpaRepository<JfTrnSofIntr
 	public Optional<JfTrnSofIntrRates> findByJtsirSofCodeAndJtsirSeqno(String code, Integer seq);
 	
 	public List<JfTrnSofIntrRates> findByJtsirSofCode(String sof);
+	
 }

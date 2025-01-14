@@ -18,4 +18,7 @@ public interface IJfTmpSofIntrRatesRepository extends JpaRepository<JfTmpSofIntr
 	
 	public List<JfTmpSofIntrRates> findByJtmsirSofCode(String sofcode);
 	
+	@Procedure(procedureName = "JF_P_APPROVE_INTR_RATES")
+	public String procApproveIntrRates(String p_userid);
+	
 }
