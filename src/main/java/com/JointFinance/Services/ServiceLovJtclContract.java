@@ -16,4 +16,12 @@ public class ServiceLovJtclContract {
 	public List<LovJtclContract> getJtclAll(){
 		return repoJTCL.findAll();
 	}
+	
+	public List<LovJtclContract> getVjtclBySofCode(String sofcode){
+		return repoJTCL.findByVjtclSofCodeContaining(sofcode);
+	}
+	
+	public List<LovJtclContract> getVjtclByContractNo(String contractno){
+		return repoJTCL.findByVjtclContractNoContaining(contractno);
+	}
 }

@@ -6,6 +6,7 @@ import java.util.Date;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,33 +17,34 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "V_JF_TRN_CONTRACT_LOV")
-
+@IdClass(LovJtclContractCompkey.class)
 public class LovJtclContract {
 	
 	@Id
 	@Column(name="VJTCL_SOF_CODE",length=10,  nullable = false)
 	private String vjtclSofCode;
 	
-	@Column(name="VJTCL_SEQ_NO")
-	private Integer vtclSeqNo;
-	
+	@Id
 	@Column(name="VJTCL_CONTRACT_NO",length=20)
-	private String vtclContractNo;
+	private String vjtclContractNo;
+	
+	@Column(name="VJTCL_SEQ_NO")
+	private Integer vjtclSeqNo;
 	
 	@Column(name="VJTCL_VERSION_NO")
-	private Integer vtclVersionNo;
+	private Integer vjtclVersionNo;
 	
 	@Column(name="VJTCL_CONTRACT_STATUS",length=2)
-	private String vtclContractStatus;
+	private String vjtclContractStatus;
 	
 	@Column(name="VJTCL_FIRST_INST_TYPE",length=2)
-	private String vtclFirstInstType;
+	private String vjtclFirstInstType;
 	
 	@Column(name="VJTCL_FIRST_INST_DATE")
-	private Date vtclFirstInstDate;
+	private Date vjtclFirstInstDate;
 	
 	@Column(name="VJTCL_TOP")
-	private Integer vtclTop;
+	private Integer vjtclTop;
 	
 	@Column(name="VJTCL_PRNC_AMT")
 	private BigDecimal vjtclPrncAmt;
@@ -57,7 +59,7 @@ public class LovJtclContract {
 	private BigDecimal vjtclIntrAmtPaid;
 	
 	@Column(name="VJTCL_INTR_TYPE",length=2)
-	private String vtclIntrType;
+	private String vjtclIntrType;
 	
 	@Column(name="VJTCL_INTR_RATE_EFF")
 	private BigDecimal vjtclIntrRateEff;
@@ -75,7 +77,7 @@ public class LovJtclContract {
 	private BigDecimal vjtclPctPenalty;
 	
 	@Column(name="VJTCL_DPD")
-	private Integer vtclDpd;
+	private Integer vjtclDpd;
 	
 	@Column(name="VJTCL_PCT_PORTION")
 	private BigDecimal vjtclPctPortion;
@@ -126,10 +128,10 @@ public class LovJtclContract {
 	private String vjtclPlatform;
 	
 	@Column(name="VJTCL_LAST_INST")
-	private Integer vtclLastInst;
+	private Integer vjtclLastInst;
 	
 	@Column(name="VJTCL_AUTO_WO_DATE")
-	private Date vtclAutoWoDate;
+	private Date vjtclAutoWoDate;
 	
 	@Column(name="VJTCL_IS_AUTO_WO",length=1)
 	private String vjtclIsAutoWo;
@@ -141,10 +143,10 @@ public class LovJtclContract {
 	private String vjtclProsesStatus;
 	
 	@Column(name="VJTCL_NEXT_INST_NO")
-	private Integer vtclNextInstNo;
+	private Integer vjtclNextInstNo;
 	
 	@Column(name="VJTCL_NEXT_DUE_DATE")
-	private Date vtclNextDueDate;
+	private Date vjtclNextDueDate;
 	
 	@Column(name="VJTCL_CREATED_BY",length=15)
 	private String vjtclCreatedBy;
@@ -159,7 +161,7 @@ public class LovJtclContract {
 	private Date vjtclLastupdateTimestamp;
 	
 	@Column(name="VJTCL_ORIGINAL_DAY")
-	private Integer vtclOriginalDay;
+	private Integer vjtclOriginalDay;
 	
 	@Column(name="VJTCL_PRNC_AMT_TEMP")
 	private BigDecimal vjtclPrncAmtTemp;
@@ -177,7 +179,7 @@ public class LovJtclContract {
 	private String vjtclJoinfinanceId;
 	
 	@Column(name="VJTCL_INST_AMT")
-	private Integer vtclInstAmt;
+	private Integer vjtclInstAmt;
 	
 	@Column(name="VJTCL_CP_CODE",length=7)
 	private String vjtclCpCode;

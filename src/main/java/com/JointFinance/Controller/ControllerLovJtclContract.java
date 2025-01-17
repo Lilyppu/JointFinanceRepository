@@ -22,5 +22,14 @@ public class ControllerLovJtclContract {
 	public List<LovJtclContract> getJtclAll(){
 		return servJTCL.getJtclAll();
 	}
+
+	@GetMapping("/jf/getVjtclBySofCode")
+	public List<LovJtclContract> getVjtclBySofCode(String sofcode){
+		return servJTCL.getVjtclBySofCode(sofcode);
+	}
 	
+	@GetMapping("/jf/getVjtclByContractNo")
+	public List<LovJtclContract> getVjtclByContractNo(String contractno){
+		return servJTCL.getVjtclByContractNo(contractno);
+	}
 }

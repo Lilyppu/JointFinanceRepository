@@ -9,7 +9,9 @@ import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
 import com.JointFinance.Models.LovJtclContract;
-public interface ILovJtclContractRepository extends JpaRepository<LovJtclContract,String>{
+import com.JointFinance.Models.LovJtclContractCompkey;
+public interface ILovJtclContractRepository extends JpaRepository<LovJtclContract,LovJtclContractCompkey>{
 
-	//public List<LovJtclContract> findByLovJtclContractvjtclContractNoContaining(String contractno);
+	public List<LovJtclContract> findByVjtclSofCodeContaining(String sofcode);
+	public List<LovJtclContract> findByVjtclContractNoContaining(String contractno);
 }
