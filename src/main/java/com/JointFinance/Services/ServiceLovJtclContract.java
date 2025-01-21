@@ -24,4 +24,8 @@ public class ServiceLovJtclContract {
 	public List<LovJtclContract> getVjtclByContractNo(String contractno){
 		return repoJTCL.findByVjtclContractNoContaining(contractno);
 	}
+	
+	public Optional<LovJtclContract> getVjtclByContractNoCU(String contractno){
+		return repoJTCL.findByVjtclContractNo(contractno);
+	}
 }

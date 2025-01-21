@@ -32,4 +32,9 @@ public class ControllerLovJtclContract {
 	public List<LovJtclContract> getVjtclByContractNo(String contractno){
 		return servJTCL.getVjtclByContractNo(contractno);
 	}
+	
+	@GetMapping("/jf/getVjtclByContractNoCU")
+	public Optional<LovJtclContract> getVjtclByContractNoCU(String contractno){
+		return servJTCL.getVjtclByContractNoCU(contractno);
+	}
 }

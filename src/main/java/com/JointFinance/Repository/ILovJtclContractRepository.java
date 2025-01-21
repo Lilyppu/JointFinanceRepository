@@ -14,4 +14,5 @@ public interface ILovJtclContractRepository extends JpaRepository<LovJtclContrac
 
 	public List<LovJtclContract> findByVjtclSofCodeContaining(String sofcode);
 	public List<LovJtclContract> findByVjtclContractNoContaining(String contractno);
+	public Optional<LovJtclContract> findByVjtclContractNo(String contractno);
 }
