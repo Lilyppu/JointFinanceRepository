@@ -16,11 +16,11 @@ import lombok.NoArgsConstructor;
 public class VLovSofTarget {
 	@Id
 	@Column(name="LOVST_SOF_CODE", length=10,  nullable = false)
-	private String lovst_sof_code;
+	private String lovstSofCode;
 	
 	@Column(name="LOVST_DESCRIPTION", length=100)
-	private String lovst_description;
+	private String lovstDescription;
 	
 	@Column(name="LOVST_ALIASES", length=10)
-	private String lovst_aliases;
+	private String lovstAliases;
 }
