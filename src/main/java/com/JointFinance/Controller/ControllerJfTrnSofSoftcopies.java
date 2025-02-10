@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
 
 import com.JointFinance.Models.JfTrnSofSoftcopies;
 import com.JointFinance.Services.ServiceJfTrnSofSoftcopies;
@@ -22,6 +23,14 @@ public class ControllerJfTrnSofSoftcopies {
 	public List<JfTrnSofSoftcopies> getJtssAll(){
 		return servJTSS.getJtssAll();
 	}
+	
+	/*
+	 @GetMapping("/jf/getAllSoftCopies")
+	    public ResponseEntity<List<JfTrnSofSoftcopies>> getAllSoftCopies() {
+	        List<JfTrnSofSoftcopies> softCopies = servJTSS.getAllWithDescription();
+	        return ResponseEntity.ok(softCopies);
+	    }
+	*/
 	
 	@GetMapping("/jf/getByJtssSofCodeList")
 	public List<JfTrnSofSoftcopies> getByJtssSofCodeList(String sofcode){
@@ -43,4 +52,10 @@ public class ControllerJfTrnSofSoftcopies {
 		servJTSS.getDelJtss(sofcode,softcopyseqno);
 		return "Delete Successfully";
 	}
+	/*
+	@GetMapping("/jf/getDescriptionJtss")
+	public String getDescriptionJtss(String softcopycode) {
+		return servJTSS.getDescriptionJtss(softcopycode);
+	}
+	*/
 }

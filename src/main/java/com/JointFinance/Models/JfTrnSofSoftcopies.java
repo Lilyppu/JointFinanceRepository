@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.math.BigDecimal;
+//import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
@@ -57,4 +57,6 @@ public class JfTrnSofSoftcopies {
     
     @Column(name = "LASTUPDATE_TIMESTAMP")
     private Date jtssLastupdateTimestamp;
+    
+    //private String jtssSofCodeDesc;
 }

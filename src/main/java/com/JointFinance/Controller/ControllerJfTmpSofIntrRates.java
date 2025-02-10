@@ -1,5 +1,6 @@
 package com.JointFinance.Controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,5 +39,10 @@ public class ControllerJfTmpSofIntrRates {
 	@PostMapping("/jf/saveUpdateJfTmpSofIntrRates")
 	public String saveUpdateJfTmpSofIntrRates(@RequestBody JfTmpSofIntrRates jtmsir) {
 		return servJTMSIR.saveUpdateJfTmpSofIntrRates(jtmsir);
+	}
+	
+	@GetMapping(path = "/jf/procApproveIntrRates")
+    public String procApproveIntrRates(String p_userid) {
+		return servJTMSIR.procApproveIntrRates(p_userid);
 	}
 }

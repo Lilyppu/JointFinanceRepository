@@ -1,5 +1,6 @@
 package com.JointFinance.Services;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,5 +31,9 @@ public class ServiceJfTmpSofIntrRates {
 	public String saveUpdateJfTmpSofIntrRates(JfTmpSofIntrRates jtmsir) {
 		repoJTMSIR.save(jtmsir);
 		return "Submit Successfully";
+	}
+	
+	public String procApproveIntrRates(String p_userid) {
+		return repoJTMSIR.procApproveIntrRates(p_userid);
 	}
 }
