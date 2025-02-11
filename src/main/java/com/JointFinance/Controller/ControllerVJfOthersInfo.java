@@ -11,21 +11,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.JointFinance.Models.VJfContInfo;
-import com.JointFinance.Services.ServiceVJfContInfo;
+import com.JointFinance.Models.VJfOthersInfo;
+import com.JointFinance.Services.ServiceVJfOthersInfo;
 
 @RestController
-public class ControllerVJfContInfo {
+public class ControllerVJfOthersInfo {
 	@Autowired
-	ServiceVJfContInfo servVJCI;
+	ServiceVJfOthersInfo servVJOI;
 	
-	@GetMapping("/jf/getVjciAll")
-	public List<VJfContInfo> getVjciAll(){
-		return servVJCI.getVjciAll();
+	@GetMapping("/jf/getVjoiAll")
+	public List<VJfOthersInfo> getVjoiAll(){
+		return servVJOI.getVjoiAll();
 	}
 	
-	@GetMapping("/jf/getVjciByContractNoCU")
-	public Optional<VJfContInfo> getVjciByContractNoCU(String contractno){
-		return servVJCI.getVjciByContractNoCU(contractno);
+	@GetMapping("/jf/getVjoiByPbContractNoCU")
+	public Optional<VJfOthersInfo> getVjoiByPbContractNoCU(String contractno){
+		return servVJOI.getVjoiByPbContractNoCU(contractno);
 	}
 }
