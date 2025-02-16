@@ -36,5 +36,5 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 	public String procSimJF(String p_userid, Date p_simdate);
 	
 	@Procedure(procedureName = "P_APP_JF")
-	public String procAprvJF(String p_userid, String jtssSofCode, Integer jtssTopId, Date p_simdate, Date jtssDisbPlanDate);
+	public String procAprvJF(String p_userid, String jtssSofCode);
 }
