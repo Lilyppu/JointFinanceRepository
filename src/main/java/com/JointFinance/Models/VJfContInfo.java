@@ -49,16 +49,16 @@ public class VJfContInfo {
 	@Column(name="VJCI_INTR_AMT")
 	private BigDecimal vjciIntrAmt;
 	
-	@Column(name="VJCI_INTR_AMT_PAID",length=1)
+	@Column(name="VJCI_INTR_AMT_PAID")
 	private BigDecimal vjciIntrAmtPaid;
 	
-	@Column(name="VJCI_OTS_INTR_AMT",length=50)
+	@Column(name="VJCI_OTS_INTR_AMT")
 	private BigDecimal vjciOtsIntrAmt;
 	
-	@Column(name="VJCI_PRNC_AMT",length=100)
+	@Column(name="VJCI_PRNC_AMT")
 	private BigDecimal vjciPrncAmt;
 	
-	@Column(name="VJCI_PRNC_AMT_PAID",length=10)
+	@Column(name="VJCI_PRNC_AMT_PAID")
 	private BigDecimal vjciAmtPaid;
 
 	@Column(name="VJCI_OTS_PRNC_AMT")

@@ -1,5 +1,4 @@
 package com.JointFinance.Controller;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -11,21 +10,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.JointFinance.Models.VJfContInfo;
-import com.JointFinance.Services.ServiceVJfContInfo;
+import com.JointFinance.Models.VJfApplInfo;
+import com.JointFinance.Services.ServiceJfApplInfo;
+
 
 @RestController
-public class ControllerVJfContInfo {
+public class ControllerVJfApplInfo {
 	@Autowired
-	ServiceVJfContInfo servVJCI;
+	ServiceJfApplInfo servVJAI;
 	
-	@GetMapping("/jf/getVjciAll")
-	public List<VJfContInfo> getVjciAll(){
-		return servVJCI.getVjciAll();
+	@GetMapping("/jf/getVjaiAll")
+	public List<VJfApplInfo> getVjaiAll(){
+		return servVJAI.getVjaiAll();
 	}
 	
-	@GetMapping("/jf/getVjciByContractNoCU")
-	public Optional<VJfContInfo> getVjciByContractNoCU(String contractno){
-		return servVJCI.getVjciByContractNoCU(contractno);
+	@GetMapping("/jf/getVjaiByContractNoCU")
+	public Optional<VJfApplInfo> getVjaiByContractNoCU(String contractno){
+		return servVJAI.getVjaiByContractNoCU(contractno);
 	}
 }
