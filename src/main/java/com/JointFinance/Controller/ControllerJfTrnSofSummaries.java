@@ -5,10 +5,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.JointFinance.Models.JfTrnSofSummaries;
 import com.JointFinance.Services.ServiceJfTrnSofSummaries;
+
 
 @RestController
 public class ControllerJfTrnSofSummaries {
@@ -35,8 +38,8 @@ public class ControllerJfTrnSofSummaries {
 		return serviceSofSummaries.procSimJF(p_userid, p_simdate);
 	}
 	
-	@GetMapping(path = "/jf/ProcAprvJf")
-    public String procAprvJF(String p_userid, Date p_simdate) {
-		return serviceSofSummaries.procAprvJF(p_userid, p_simdate);
+	@PostMapping(path = "/jf/ApproveJf")
+    public String procAprvJF(@RequestBody JfTrnSofSummaries jfTrnSofSummaries) {
+		return serviceSofSummaries.saveApproveJF(jfTrnSofSummaries);
 	}
 }

@@ -19,6 +19,7 @@ public class ServiceJfTrnSofSummaries {
 	}
 	
 	public List<JfTrnSofSummaries> findBySofDate(Date sofDate) {
+		System.out.println("Simulation Date = " + sofDate);
 		return repoSofSummaries.findBySofDate(sofDate, sofDate);
 	}
 	
@@ -27,14 +28,17 @@ public class ServiceJfTrnSofSummaries {
 	}
 	
 	public String procGenJF(String p_userid, Date p_simdate) {
+		System.out.println("Simulation Date = " + p_simdate);
 		return repoSofSummaries.procGenJF(p_userid, p_simdate);
 	}
 	
 	public String procSimJF(String p_userid, Date p_simdate) {
+		System.out.println("Simulation Date = " + p_simdate);
 		return repoSofSummaries.procSimJF(p_userid, p_simdate);
 	}
 	
-	public String procAprvJF(String p_userid, Date p_simdate) {
-		return repoSofSummaries.procAprvJF(p_userid, p_simdate);
+	public String saveApproveJF(JfTrnSofSummaries jfTrnSofSummaries) {
+		repoSofSummaries.save(jfTrnSofSummaries);
+		return "Approve Process Success.";
 	}
 }
