@@ -37,8 +37,16 @@ public class ServiceJfTrnSofSummaries {
 		return repoSofSummaries.procSimJF(p_userid, p_simdate);
 	}
 	
-	public String saveApproveJF(JfTrnSofSummaries jfTrnSofSummaries) {
-		repoSofSummaries.save(jfTrnSofSummaries);
+	public String saveApproveJF(List<JfTrnSofSummaries> jfTrnSofSummaries) {
+		repoSofSummaries.saveAll(jfTrnSofSummaries);
 		return "Approve Process Success.";
+	}
+	
+	public Double getTotFifPct(String sofCode, Date sofDate, int topId) {
+		return repoSofSummaries.getTotFifPct(sofCode, sofDate, topId);
+	}
+	
+	public Double getTotJfPortion(Date simDate) {
+		return repoSofSummaries.getTotJfPortion(simDate);
 	}
 }

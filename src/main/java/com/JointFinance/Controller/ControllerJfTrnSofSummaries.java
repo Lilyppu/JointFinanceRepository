@@ -39,7 +39,17 @@ public class ControllerJfTrnSofSummaries {
 	}
 	
 	@PostMapping(path = "/jf/ApproveJf")
-    public String procAprvJF(@RequestBody JfTrnSofSummaries jfTrnSofSummaries) {
+    public String procAprvJF(@RequestBody List<JfTrnSofSummaries> jfTrnSofSummaries) {
 		return serviceSofSummaries.saveApproveJF(jfTrnSofSummaries);
+	}
+	
+	@GetMapping(path = "/jf/getTotFifPct")
+    public Double getTotFifPct(String sofCode, Date sofDate, int topId) {
+		return serviceSofSummaries.getTotFifPct(sofCode, sofDate, topId);
+	}
+	
+	@GetMapping(path = "/jf/getTotJfPortion")
+    public Double getTotJfPortion(Date simDate) {
+		return serviceSofSummaries.getTotJfPortion(simDate);
 	}
 }

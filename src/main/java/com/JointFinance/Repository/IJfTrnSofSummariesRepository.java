@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.JointFinance.Models.JfTrnSofSummaries;
@@ -37,4 +38,10 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 	
 	@Procedure(procedureName = "P_APP_JF")
 	public String procAprvJF(String p_userid, String jtssSofCode);
+	
+	@Query(value = "SELECT JF_F_TOT_FIFPCT (:P_SOF_CODE, :P_SOF_DATE, :P_TOP_ID) FROM DUAL", nativeQuery = true)
+	public Double getTotFifPct(@Param("P_SOF_CODE") String sofCode, @Param("P_SOF_DATE") Date sofDate, @Param("P_TOP_ID") int topId);
+	
+	@Query(value = "SELECT JF_F_TOT_JF_PORTION (:P_SIM_DATE) FROM DUAL", nativeQuery = true)
+	public Double getTotJfPortion(@Param("P_SIM_DATE") Date simDate);
 }
