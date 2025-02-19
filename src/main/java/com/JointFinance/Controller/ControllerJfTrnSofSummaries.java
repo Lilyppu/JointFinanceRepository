@@ -1,5 +1,6 @@
 package com.JointFinance.Controller;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.JointFinance.Models.JfTrnSofSummaries;
@@ -44,12 +46,12 @@ public class ControllerJfTrnSofSummaries {
 	}
 	
 	@GetMapping(path = "/jf/getTotFifPct")
-    public Double getTotFifPct(String sofCode, Date sofDate, int topId) {
+    public BigDecimal getTotFifPct(@RequestParam String sofCode, @RequestParam Date sofDate, @RequestParam Integer topId) {
 		return serviceSofSummaries.getTotFifPct(sofCode, sofDate, topId);
 	}
 	
 	@GetMapping(path = "/jf/getTotJfPortion")
-    public Double getTotJfPortion(Date simDate) {
+    public BigDecimal getTotJfPortion(@RequestParam Date simDate) {
 		return serviceSofSummaries.getTotJfPortion(simDate);
 	}
 }

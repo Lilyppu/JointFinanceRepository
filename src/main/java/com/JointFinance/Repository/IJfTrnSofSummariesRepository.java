@@ -1,5 +1,6 @@
 package com.JointFinance.Repository;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -40,8 +41,8 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 	public String procAprvJF(String p_userid, String jtssSofCode);
 	
 	@Query(value = "SELECT JF_F_TOT_FIFPCT (:P_SOF_CODE, :P_SOF_DATE, :P_TOP_ID) FROM DUAL", nativeQuery = true)
-	public Double getTotFifPct(@Param("P_SOF_CODE") String sofCode, @Param("P_SOF_DATE") Date sofDate, @Param("P_TOP_ID") int topId);
+	public BigDecimal getTotFifPct(@Param("P_SOF_CODE") String sofCode, @Param("P_SOF_DATE") Date sofDate, @Param("P_TOP_ID") Integer topId);
 	
 	@Query(value = "SELECT JF_F_TOT_JF_PORTION (:P_SIM_DATE) FROM DUAL", nativeQuery = true)
-	public Double getTotJfPortion(@Param("P_SIM_DATE") Date simDate);
+	public BigDecimal getTotJfPortion(@Param("P_SIM_DATE") Date simDate);
 }

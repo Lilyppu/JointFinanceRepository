@@ -1,5 +1,6 @@
 package com.JointFinance.Services;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -42,11 +43,11 @@ public class ServiceJfTrnSofSummaries {
 		return "Approve Process Success.";
 	}
 	
-	public Double getTotFifPct(String sofCode, Date sofDate, int topId) {
+	public BigDecimal getTotFifPct(String sofCode, Date sofDate, Integer topId) {
 		return repoSofSummaries.getTotFifPct(sofCode, sofDate, topId);
 	}
 	
-	public Double getTotJfPortion(Date simDate) {
+	public BigDecimal getTotJfPortion(Date simDate) {
 		return repoSofSummaries.getTotJfPortion(simDate);
 	}
 }
