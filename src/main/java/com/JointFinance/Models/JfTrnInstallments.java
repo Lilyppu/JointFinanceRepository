@@ -42,7 +42,7 @@ public class JfTrnInstallments {
 	private Integer jtisInstNoOriginal;
 	
 	@Column(name="DUE_DATE")
-	private Date jtisPaidSeq;
+	private Date jtisDueDate;
 	
 	@Column(name="PAID_DATE")
 	private Date jtisPaidDate;
