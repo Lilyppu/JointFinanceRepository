@@ -18,7 +18,4 @@ public class ServiceVJfPretermInfo {
 	{
 		return repoVJPtI.findByVjptiNoAndVjptiSofNo(ptno, sof);
 	}
-	
-	
-	
 }

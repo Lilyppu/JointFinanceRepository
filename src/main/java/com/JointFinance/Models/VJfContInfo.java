@@ -59,7 +59,7 @@ public class VJfContInfo {
 	private BigDecimal vjciPrncAmt;
 	
 	@Column(name="VJCI_PRNC_AMT_PAID")
-	private BigDecimal vjciAmtPaid;
+	private BigDecimal vjciPrncAmtPaid;
 
 	@Column(name="VJCI_OTS_PRNC_AMT")
 	private BigDecimal vjciOtsPrncAmt;
