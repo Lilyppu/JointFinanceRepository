@@ -31,7 +31,7 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 	
 	public List<JfTrnSofSummaries> findByJtssSofDateAndJtssApproveStatus(Date sofDate, String approveStatus);
 	
-	@Procedure(procedureName = "P_GENJF")
+	@Procedure(procedureName = "JF_P_GENJF")
 	public String procGenJF(String p_userid, Date p_simdate);
 	
 	@Procedure(procedureName = "P_SIMJF")
