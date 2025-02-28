@@ -45,4 +45,7 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 	
 	@Query(value = "SELECT JF_F_TOT_JF_PORTION (:P_SIM_DATE) FROM DUAL", nativeQuery = true)
 	public BigDecimal getTotJfPortion(@Param("P_SIM_DATE") Date simDate);
+	
+	@Procedure(procedureName = "JF_P_SIMJF")
+	public String procSimJF(String p_sof_code, Integer p_top_id, Date p_simdate, BigDecimal p_adjusment_amt, String p_sof_code_target, String p_userid);
 }
