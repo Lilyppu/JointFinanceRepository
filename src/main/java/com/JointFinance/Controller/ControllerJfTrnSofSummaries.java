@@ -40,7 +40,7 @@ public class ControllerJfTrnSofSummaries {
 		return serviceSofSummaries.procSimJF(p_userid, p_simdate);
 	}
 	
-	@GetMapping(path = "/jf/ProcSimJf")
+	@GetMapping(path = "/jf/P_SIMJF")
     public String procSimJF(String p_sof_code, Integer p_top_id, Date p_simdate, BigDecimal p_adjusment_amt, String p_sof_code_target, String p_userid) {
 		return serviceSofSummaries.procSimJF(p_sof_code, p_top_id, p_simdate, p_adjusment_amt, p_sof_code_target, p_userid);
 	}
