@@ -77,6 +77,6 @@ public class JfTrnSofSummaries implements Serializable {
 	@Column(name="DISB_PLAN_DATE")
 	private Date jtssDisbPlanDate;
 	
-	@ManyToOne
-	private JfTrnSofHdrs jfTrnSofHdrs;
+	//@ManyToOne
+	//private JfTrnSofHdrs jfTrnSofHdrs;
 }

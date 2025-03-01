@@ -21,9 +21,9 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 				+ " WHERE TRUNC (jtss.SOF_DATE) <= ?1\r\n"
 				+ "       AND jtss.APPROVE_STATUS = 'NA'\r\n"
 				+ "       AND PRNC_AMT > 0\r\n"
-				+ "       AND (EXISTS (SELECT 1 FROM JF_TRN_SOF_HDRS jtsh WHERE jtsh.JF_MODEL = 'JF'\r\n"
+				+ "       AND (EXISTS (SELECT jtsh.* FROM JF_TRN_SOF_HDRS jtsh WHERE jtsh.JF_MODEL = 'JF'\r\n"
 				+ "                    AND jtsh.SOF_CODE = jtss.SOF_CODE) OR jtss.SOF_CODE = '000')\r\n"
-				+ "       AND NOT EXISTS (SELECT 1 FROM JF_TRN_SOF_SUMMARIES jtss2\r\n"
+				+ "       AND NOT EXISTS (SELECT jtss2.* FROM JF_TRN_SOF_SUMMARIES jtss2\r\n"
 				+ "                        WHERE APPROVE_STATUS = 'AP'\r\n"
 				+ "                          AND jtss2.SOF_CODE = jtss.SOF_CODE\r\n"
 				+ "                          AND TRUNC (SOF_DATE) = ?2)", nativeQuery = true)
