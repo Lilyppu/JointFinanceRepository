@@ -45,9 +45,9 @@ public class ControllerJfTrnSofSummaries {
 		return serviceSofSummaries.procSimJF(p_sof_code, p_top_id, p_simdate, p_adjusment_amt, p_sof_code_target, p_userid);
 	}
 	
-	@PostMapping(path = "/jf/ApproveJf")
-    public String procAprvJF(@RequestBody List<JfTrnSofSummaries> jfTrnSofSummaries) {
-		return serviceSofSummaries.saveApproveJF(jfTrnSofSummaries);
+	@GetMapping(path = "/jf/P_APPJF")
+    public String procAprvJF(String p_userid, String p_sof_code, Integer p_top_id, Date p_simdate, Date p_disb_plan_date) {
+		return serviceSofSummaries.procAprvJF(p_userid, p_sof_code, p_top_id, p_simdate, p_disb_plan_date);
 	}
 	
 	@GetMapping(path = "/jf/getTotFifPct")

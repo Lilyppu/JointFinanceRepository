@@ -37,8 +37,8 @@ public interface IJfTrnSofSummariesRepository extends JpaRepository<JfTrnSofSumm
 	@Procedure(procedureName = "P_SIMJF")
 	public String procSimJF(String p_userid, Date p_simdate);
 	
-	@Procedure(procedureName = "P_APP_JF")
-	public String procAprvJF(String p_userid, String jtssSofCode);
+	@Procedure(procedureName = "JF_P_APPJF")
+	public String procAprvJF(String p_userid, String p_sof_code, Integer p_top_id, Date p_simdate, Date p_disb_plan_date);
 	
 	@Query(value = "SELECT JF_F_TOT_FIFPCT (:P_SOF_CODE, :P_SOF_DATE, :P_TOP_ID) FROM DUAL", nativeQuery = true)
 	public BigDecimal getTotFifPct(@Param("P_SOF_CODE") String sofCode, @Param("P_SOF_DATE") Date sofDate, @Param("P_TOP_ID") Integer topId);

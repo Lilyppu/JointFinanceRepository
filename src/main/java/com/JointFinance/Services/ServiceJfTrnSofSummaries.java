@@ -42,6 +42,10 @@ public class ServiceJfTrnSofSummaries {
 		return repoSofSummaries.procSimJF(p_sof_code, p_top_id, p_simdate, p_adjusment_amt, p_sof_code_target, p_userid);
 	}
 	
+	public String procAprvJF(String p_userid, String p_sof_code, Integer p_top_id, Date p_simdate, Date p_disb_plan_date) {
+		return repoSofSummaries.procAprvJF(p_userid, p_sof_code, p_top_id, p_simdate, p_disb_plan_date);
+	}
+	
 	public String saveApproveJF(List<JfTrnSofSummaries> jfTrnSofSummaries) {
 		repoSofSummaries.saveAll(jfTrnSofSummaries);
 		return "Approve Process Success.";
